@@ -24,20 +24,17 @@ namespace SUNNAH_STATION_PROJECT
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void productbuttion (bool y)
         {
-            //visible 
-            producttable.Visible = true;
-            addbt.Visible = true;
-            editbt.Visible = true;
-            deletebt.Visible = true;
-            refrashbt.Visible = true;
+            producttable.Visible = y;
+            addbt.Visible = y;
+            editbt.Visible = y;
+            deletebt.Visible = y;
+            refrashbt.Visible = y;
+        }
 
-            //visible-end 
-
-
-            //create table 
-
+        private void table1()
+        {
             SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
             conn.Open();
 
@@ -55,8 +52,20 @@ namespace SUNNAH_STATION_PROJECT
 
             producttable.DataSource = dt;
             producttable.Refresh();
-            
 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //visible 
+            productbuttion(true);
+
+            //visible-end 
+
+
+            //create table 
+
+            table1();
+            
             //create table end
 
 
@@ -67,20 +76,97 @@ namespace SUNNAH_STATION_PROJECT
 
         }
 
+        private void addproduct(bool x)
+        {
+            panel1.Visible = x;
+            Nametextbox.Visible = x;
+            textBox1.Visible = x;
+            label2.Visible = x;
+            textBox2.Visible = x;
+            label3.Visible = x;
+            textBox3.Visible = x;
+            label4.Visible = x;
+            textBox4.Visible = x;
+            label5.Visible = x;
+            textBox5.Visible = x;
+            label6.Visible = x;
+            comboBox1.Visible = x;
+        }
+
         private void addbt_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            Nametextbox.Visible = true;
-            label2.Visible = true;
-            textBox2.Visible = true;
-            label3.Visible = true;
-            textBox3.Visible = true;
-            label4.Visible = true;
-            textBox4.Visible = true;
-            label5.Visible = true;
-            textBox5.Visible = true;
-            label6.Visible = true;
-            comboBox1.Visible = true;
+
+            //visible
+
+            addproduct(true);
+            productbuttion(false);
+                  
+            //visible end
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name, id, amount, status, categories, price;
+
+            name = textBox1.Text;
+            id = textBox2.Text;
+            categories = textBox3.Text;
+            amount = textBox4.Text;
+            price = textBox5.Text;
+            status = comboBox1.Text;
+
+
+            if (String.IsNullOrEmpty(textBox1.Text)
+                || String.IsNullOrEmpty(textBox2.Text)
+                || String.IsNullOrEmpty(textBox4.Text)
+                || String.IsNullOrEmpty(textBox5.Text)
+                || String.IsNullOrEmpty(comboBox1.Text)
+               )
+            {
+                MessageBox.Show(" Please Provide all informations");
+            }
+            else
+            {
+
+                    SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                    conn.Open();
+                    string query1 = "insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')";
+                    SqlCommand cmd = new SqlCommand(query1, conn);
+                    int row = cmd.ExecuteNonQuery();
+                    if (row == 1)
+                    {
+                        MessageBox.Show("Product added Successfully");
+
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        textBox3.Clear();
+                        textBox4.Clear();
+                        textBox5.Clear();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Try Again ");
+                    }
+                    conn.Close();
+                
+                
+
+            }
+
+
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            addproduct(false);
+            productbuttion(true);
+            table1();
+        }
+        private void refrashbt_Click(object sender, EventArgs e)
+        {
+                table1();
 
         }
     }

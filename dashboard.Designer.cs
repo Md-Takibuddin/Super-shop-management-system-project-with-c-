@@ -55,16 +55,18 @@ namespace SUNNAH_STATION_PROJECT
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Nametextbox = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -303,6 +305,7 @@ namespace SUNNAH_STATION_PROJECT
             this.refrashbt.TabIndex = 8;
             this.refrashbt.UseVisualStyleBackColor = false;
             this.refrashbt.Visible = false;
+            this.refrashbt.Click += new System.EventHandler(this.refrashbt_Click);
             // 
             // editbt
             // 
@@ -334,8 +337,11 @@ namespace SUNNAH_STATION_PROJECT
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox1.Location = new System.Drawing.Point(191, 45);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(552, 34);
@@ -359,8 +365,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.Cancel);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label6);
@@ -380,94 +388,17 @@ namespace SUNNAH_STATION_PROJECT
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             // 
-            // label2
+            // comboBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(46, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 24);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ID";
-            this.label2.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(191, 94);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(552, 34);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "alu vai";
-            this.textBox2.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(46, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Categories";
-            this.label3.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(191, 146);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(552, 34);
-            this.textBox3.TabIndex = 11;
-            this.textBox3.Text = "alu vai";
-            this.textBox3.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(46, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 24);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Amount";
-            this.label4.Visible = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(191, 196);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(552, 34);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Text = "alu vai";
-            this.textBox4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(46, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 24);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Price";
-            this.label5.Visible = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "In Stock",
+            "Out of Stock"});
+            this.comboBox1.Location = new System.Drawing.Point(191, 300);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 21);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.Visible = false;
             // 
             // textBox5
             // 
@@ -489,22 +420,119 @@ namespace SUNNAH_STATION_PROJECT
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label6.Location = new System.Drawing.Point(46, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.Size = new System.Drawing.Size(60, 24);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Price";
+            this.label6.Text = "Status";
             this.label6.Visible = false;
             // 
-            // comboBox1
+            // label5
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "In Stock",
-            "Out of Stock"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label5.Location = new System.Drawing.Point(46, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 24);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Price";
+            this.label5.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(191, 196);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(552, 34);
+            this.textBox4.TabIndex = 11;
+            this.textBox4.Text = "alu vai";
+            this.textBox4.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label4.Location = new System.Drawing.Point(46, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 24);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Amount";
+            this.label4.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(191, 146);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(552, 34);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.Text = "alu vai";
+            this.textBox3.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(46, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Categories";
+            this.label3.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(191, 94);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(552, 34);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Text = "alu vai";
+            this.textBox2.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(46, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 24);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID";
+            this.label2.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(601, 387);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 38);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Add Product";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(492, 401);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 15;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // dashboard
             // 
@@ -573,5 +601,7 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Cancel;
     }
 }
