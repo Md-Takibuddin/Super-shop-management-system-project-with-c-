@@ -54,6 +54,7 @@ namespace SUNNAH_STATION_PROJECT
             producttable.Refresh();
 
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             //visible 
@@ -128,28 +129,42 @@ namespace SUNNAH_STATION_PROJECT
             }
             else
             {
+                int am;
 
-                    SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-                    conn.Open();
-                    string query1 = "insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')";
-                    SqlCommand cmd = new SqlCommand(query1, conn);
-                    int row = cmd.ExecuteNonQuery();
-                    if (row == 1)
+                  
+
+
+                if (int.TryParse(amount, out am) && int.TryParse(price, out am))
                     {
-                        MessageBox.Show("Product added Successfully");
 
-                        textBox1.Clear();
-                        textBox2.Clear();
-                        textBox3.Clear();
-                        textBox4.Clear();
-                        textBox5.Clear();
+                        
+                            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                            conn.Open();
+                            string query1 = "insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')";
+                            SqlCommand cmd = new SqlCommand(query1, conn);
+                            int row = cmd.ExecuteNonQuery();
+                            if (row == 1)
+                            {
+                                MessageBox.Show("Product added Successfully");
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Try Again ");
-                    }
-                    conn.Close();
+                                textBox1.Clear();
+                                textBox2.Clear();
+                                textBox3.Clear();
+                                textBox4.Clear();
+                                textBox5.Clear();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Try Again ");
+                            }
+                            conn.Close();
+
+                     }
+                else
+                {
+                    MessageBox.Show("INVALID Data type");
+                }
                 
                 
 
