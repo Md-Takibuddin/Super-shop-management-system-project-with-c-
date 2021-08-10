@@ -29,11 +29,12 @@ namespace SUNNAH_STATION_PROJECT
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -55,8 +56,6 @@ namespace SUNNAH_STATION_PROJECT
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Nametextbox = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nameboxpic = new System.Windows.Forms.PictureBox();
-            this.Cancel = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,6 +66,8 @@ namespace SUNNAH_STATION_PROJECT
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.nameboxpic = new System.Windows.Forms.PictureBox();
+            this.Cancel = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.idboxpic = new System.Windows.Forms.PictureBox();
@@ -88,6 +89,8 @@ namespace SUNNAH_STATION_PROJECT
             this.statusbox = new System.Windows.Forms.ComboBox();
             this.SaveandUpdate = new System.Windows.Forms.Button();
             this.updatecancle = new System.Windows.Forms.Button();
+            this.deletebtn = new System.Windows.Forms.Button();
+            this.deletcancle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -169,13 +172,13 @@ namespace SUNNAH_STATION_PROJECT
             this.producttable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.producttable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.producttable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Bangaratno", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.White;
-            this.producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bangaratno", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.producttable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.producttable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tname,
@@ -185,31 +188,31 @@ namespace SUNNAH_STATION_PROJECT
             this.tprice,
             this.tstat});
             this.producttable.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle48.NullValue = "-";
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.producttable.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.NullValue = "-";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.producttable.DefaultCellStyle = dataGridViewCellStyle3;
             this.producttable.EnableHeadersVisualStyles = false;
             this.producttable.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.producttable.Location = new System.Drawing.Point(260, 172);
+            this.producttable.Location = new System.Drawing.Point(260, 123);
             this.producttable.Name = "producttable";
             this.producttable.ReadOnly = true;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.producttable.RowHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.producttable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.producttable.RowHeadersVisible = false;
-            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Transparent;
-            this.producttable.RowsDefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Transparent;
+            this.producttable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.producttable.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.producttable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.producttable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -225,9 +228,9 @@ namespace SUNNAH_STATION_PROJECT
             // tname
             // 
             this.tname.DataPropertyName = "Name";
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            this.tname.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.tname.DefaultCellStyle = dataGridViewCellStyle2;
             this.tname.HeaderText = "Name";
             this.tname.Name = "tname";
             this.tname.ReadOnly = true;
@@ -278,7 +281,7 @@ namespace SUNNAH_STATION_PROJECT
             this.addbt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addbt.FlatAppearance.BorderSize = 0;
             this.addbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addbt.Location = new System.Drawing.Point(886, 119);
+            this.addbt.Location = new System.Drawing.Point(260, 86);
             this.addbt.Name = "addbt";
             this.addbt.Size = new System.Drawing.Size(30, 30);
             this.addbt.TabIndex = 5;
@@ -307,7 +310,7 @@ namespace SUNNAH_STATION_PROJECT
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(68, 227);
@@ -326,7 +329,7 @@ namespace SUNNAH_STATION_PROJECT
             this.refrashbt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refrashbt.FlatAppearance.BorderSize = 0;
             this.refrashbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refrashbt.Location = new System.Drawing.Point(1014, 119);
+            this.refrashbt.Location = new System.Drawing.Point(388, 86);
             this.refrashbt.Name = "refrashbt";
             this.refrashbt.Size = new System.Drawing.Size(30, 30);
             this.refrashbt.TabIndex = 8;
@@ -341,7 +344,7 @@ namespace SUNNAH_STATION_PROJECT
             this.editbt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.editbt.FlatAppearance.BorderSize = 0;
             this.editbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editbt.Location = new System.Drawing.Point(927, 119);
+            this.editbt.Location = new System.Drawing.Point(301, 86);
             this.editbt.Name = "editbt";
             this.editbt.Size = new System.Drawing.Size(30, 30);
             this.editbt.TabIndex = 9;
@@ -356,12 +359,13 @@ namespace SUNNAH_STATION_PROJECT
             this.deletebt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.deletebt.FlatAppearance.BorderSize = 0;
             this.deletebt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletebt.Location = new System.Drawing.Point(968, 119);
+            this.deletebt.Location = new System.Drawing.Point(342, 86);
             this.deletebt.Name = "deletebt";
             this.deletebt.Size = new System.Drawing.Size(30, 30);
             this.deletebt.TabIndex = 10;
             this.deletebt.UseVisualStyleBackColor = false;
             this.deletebt.Visible = false;
+            this.deletebt.Click += new System.EventHandler(this.deletebt_Click);
             // 
             // textBox1
             // 
@@ -378,22 +382,22 @@ namespace SUNNAH_STATION_PROJECT
             // 
             // Nametextbox
             // 
-            this.Nametextbox.AutoSize = true;
-            this.Nametextbox.BackColor = System.Drawing.Color.Transparent;
-            this.Nametextbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nametextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nametextbox.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Nametextbox.Location = new System.Drawing.Point(46, 55);
+            this.Nametextbox.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Nametextbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Nametextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nametextbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Nametextbox.Location = new System.Drawing.Point(50, 45);
             this.Nametextbox.Name = "Nametextbox";
-            this.Nametextbox.Size = new System.Drawing.Size(61, 24);
+            this.Nametextbox.Size = new System.Drawing.Size(141, 34);
             this.Nametextbox.TabIndex = 12;
             this.Nametextbox.Text = "Name";
+            this.Nametextbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Nametextbox.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label6);
@@ -409,9 +413,135 @@ namespace SUNNAH_STATION_PROJECT
             this.panel1.Location = new System.Drawing.Point(260, 172);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 334);
+            this.panel1.Size = new System.Drawing.Size(802, 352);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.ItemHeight = 25;
+            this.comboBox1.Items.AddRange(new object[] {
+            "In Stock",
+            "Out of Stock"});
+            this.comboBox1.Location = new System.Drawing.Point(191, 298);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 33);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(191, 245);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(552, 34);
+            this.textBox5.TabIndex = 11;
+            this.textBox5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(45, 298);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 34);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Status";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(46, 245);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 34);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Price";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(191, 196);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(552, 34);
+            this.textBox4.TabIndex = 11;
+            this.textBox4.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(46, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 34);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Amount";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(191, 146);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(552, 34);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(46, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 34);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Categories";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(191, 94);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(552, 34);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(46, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 34);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Visible = false;
             // 
             // nameboxpic
             // 
@@ -442,128 +572,6 @@ namespace SUNNAH_STATION_PROJECT
             this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Visible = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "In Stock",
-            "Out of Stock"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Visible = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(191, 245);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(552, 34);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(46, 298);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Status";
-            this.label6.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(46, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 24);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Price";
-            this.label5.Visible = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(191, 196);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(552, 34);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(46, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 24);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Amount";
-            this.label4.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(191, 146);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(552, 34);
-            this.textBox3.TabIndex = 11;
-            this.textBox3.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(46, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Categories";
-            this.label3.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(191, 94);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(552, 34);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(46, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 24);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ID";
-            this.label2.Visible = false;
             // 
             // add
             // 
@@ -776,12 +784,13 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(-26, 711);
+            this.textBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox7.Location = new System.Drawing.Point(865, 92);
             this.textBox7.Margin = new System.Windows.Forms.Padding(0);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(72, 24);
+            this.textBox7.Size = new System.Drawing.Size(194, 24);
             this.textBox7.TabIndex = 28;
-            this.textBox7.Text = "xoxo";
+            this.textBox7.Text = "search";
             this.textBox7.UseWaitCursor = true;
             this.textBox7.Visible = false;
             // 
@@ -840,12 +849,54 @@ namespace SUNNAH_STATION_PROJECT
             this.updatecancle.Visible = false;
             this.updatecancle.Click += new System.EventHandler(this.button4_Click);
             // 
+            // deletebtn
+            // 
+            this.deletebtn.BackColor = System.Drawing.Color.Transparent;
+            this.deletebtn.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.red_bar;
+            this.deletebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.deletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deletebtn.FlatAppearance.BorderSize = 0;
+            this.deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deletebtn.Location = new System.Drawing.Point(901, 662);
+            this.deletebtn.Name = "deletebtn";
+            this.deletebtn.Size = new System.Drawing.Size(129, 45);
+            this.deletebtn.TabIndex = 31;
+            this.deletebtn.Text = "Delete";
+            this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Visible = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
+            // 
+            // deletcancle
+            // 
+            this.deletcancle.BackColor = System.Drawing.Color.Transparent;
+            this.deletcancle.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.bar2;
+            this.deletcancle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deletcancle.FlatAppearance.BorderSize = 0;
+            this.deletcancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletcancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletcancle.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.deletcancle.Location = new System.Drawing.Point(805, 669);
+            this.deletcancle.Name = "deletcancle";
+            this.deletcancle.Size = new System.Drawing.Size(85, 32);
+            this.deletcancle.TabIndex = 32;
+            this.deletcancle.Text = "Cancle";
+            this.deletcancle.UseVisualStyleBackColor = false;
+            this.deletcancle.Visible = false;
+            this.deletcancle.Click += new System.EventHandler(this.deleteancle_Click);
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.Home_page;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.add);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.deletcancle);
+            this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.updatecancle);
             this.Controls.Add(this.SaveandUpdate);
             this.Controls.Add(this.label7);
@@ -876,13 +927,11 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.priceboxpic);
             this.Controls.Add(this.producttable);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.categoriesboxpic);
             this.Controls.Add(this.nameboxpic);
             this.Controls.Add(this.idboxpic);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dashboard";
@@ -960,5 +1009,7 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button SaveandUpdate;
         private System.Windows.Forms.Button updatecancle;
+        private System.Windows.Forms.Button deletebtn;
+        private System.Windows.Forms.Button deletcancle;
     }
 }

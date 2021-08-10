@@ -29,6 +29,7 @@ namespace SUNNAH_STATION_PROJECT
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
             this.button3 = new System.Windows.Forms.Button();
             this.textname = new System.Windows.Forms.TextBox();
             this.textemail = new System.Windows.Forms.TextBox();
@@ -157,6 +158,7 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.textname);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

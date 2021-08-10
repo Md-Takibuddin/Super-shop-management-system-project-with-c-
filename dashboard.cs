@@ -93,8 +93,7 @@ namespace SUNNAH_STATION_PROJECT
             priceboxpic.Visible = a;
             statusboxpic.Visible = a;
             statusbox.Visible = a;
-            SaveandUpdate.Visible = a;
-            updatecancle.Visible = a;
+            
 
         }
         private void producttable_CellClick (object sender, DataGridViewCellEventArgs e)
@@ -143,13 +142,14 @@ namespace SUNNAH_STATION_PROJECT
 
         private void addbt_Click(object sender, EventArgs e)
         {
-
             //visible
-
+            deletebtn.Visible = false;
             addproduct(true);
             productbuttion(false);
             updatevisible(false);
-                  
+            SaveandUpdate.Visible = false;
+            updatecancle.Visible = false;
+
             //visible end
 
         }
@@ -234,8 +234,12 @@ namespace SUNNAH_STATION_PROJECT
         private void editbt_Click(object sender, EventArgs e)
         {
             updatevisible(true);
+            SaveandUpdate.Visible = true;
+            updatecancle.Visible = true;
+            deletebtn.Visible = false;
+            deletcancle.Visible = false;
 
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -243,6 +247,8 @@ namespace SUNNAH_STATION_PROJECT
             updatevisible(false);
             productbuttion(true);
             table1();
+            updatecancle.Visible = false;
+            SaveandUpdate.Visible = false;
         }
 
         int row;
@@ -301,6 +307,50 @@ namespace SUNNAH_STATION_PROJECT
                 {
                     MessageBox.Show("INVALID Data type");
                 }
+            }
+        }
+
+        private void deletebt_Click(object sender, EventArgs e)
+        {
+            //visible
+            deletebtn.Visible = true;
+            updatevisible(true);
+            SaveandUpdate.Visible = false;
+            updatecancle.Visible = false;
+            deletcancle.Visible = true;
+            //visible end
+
+
+
+        }
+
+        private void deleteancle_Click(object sender, EventArgs e)
+        {
+            updatevisible(false);
+            deletebtn.Visible = false;
+            deletcancle.Visible = false;
+        }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            if ( idbox.Text == "")
+            {
+                MessageBox.Show("Select the row you want to delete.");
+            }
+            else
+            {
+                string dq = "delete from Product where ID ='" +idbox.Text + "'";
+                dbconn(dq);
+                table1();
+                namebox.Clear();
+                idbox.Clear();
+                categoriesbox.Clear();
+                amountbox.Clear();
+                statusbox.SelectedItem = null;
+                pricebox.Clear();
+                table1();
+                row = 0;
+
             }
         }
     }
