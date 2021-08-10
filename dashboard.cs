@@ -49,9 +49,9 @@ namespace SUNNAH_STATION_PROJECT
             adp.Fill(ds);
 
             DataTable dt = ds.Tables[0];
-
             producttable.DataSource = dt;
             producttable.Refresh();
+            conn.Close();
 
         }
 
@@ -72,9 +72,51 @@ namespace SUNNAH_STATION_PROJECT
 
         }
 
+        private void updatevisible (bool a)
+        {
+            
+            label7.Visible = a;
+            label8.Visible = a;
+            label9.Visible = a;
+            label10.Visible = a;
+            label11.Visible = a;
+            label12.Visible = a;
+            nameboxpic.Visible = a;
+            namebox.Visible = a;
+            idboxpic.Visible = a;
+            idbox.Visible = a;
+            categoriesbox.Visible = a;
+            categoriesboxpic.Visible = a;
+            amountbox.Visible = a;
+            amountboxpic.Visible = a;
+            pricebox.Visible = a;
+            priceboxpic.Visible = a;
+            statusboxpic.Visible = a;
+            statusbox.Visible = a;
+            SaveandUpdate.Visible = a;
+            updatecancle.Visible = a;
+
+        }
         private void producttable_CellClick (object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex>=0)
+            {
+                string a = producttable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string b = producttable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string c = producttable.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string f = producttable.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string d = producttable.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string g = producttable.Rows[e.RowIndex].Cells[5].Value.ToString();
 
+                namebox.Text = a;            
+                idbox.Text = b;       
+                categoriesbox.Text = g;                
+                amountbox.Text = c;                
+                statusbox.Text = f;                
+                pricebox.Text = d;
+
+                
+            }
         }
 
         private void addproduct(bool x)
@@ -92,6 +134,11 @@ namespace SUNNAH_STATION_PROJECT
             textBox5.Visible = x;
             label6.Visible = x;
             comboBox1.Visible = x;
+            add.Visible = x;
+            Cancel.Visible = x;
+            
+
+
         }
 
         private void addbt_Click(object sender, EventArgs e)
@@ -101,6 +148,7 @@ namespace SUNNAH_STATION_PROJECT
 
             addproduct(true);
             productbuttion(false);
+            updatevisible(false);
                   
             //visible end
 
@@ -183,6 +231,71 @@ namespace SUNNAH_STATION_PROJECT
         {
                 table1();
 
+        }
+
+        private void editbt_Click(object sender, EventArgs e)
+        {
+            updatevisible(true);
+
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            updatevisible(false);
+            productbuttion(true);
+            table1();
+        }
+
+        private void SaveandUpdate_Click(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrEmpty(namebox.Text)
+                || String.IsNullOrEmpty(idbox.Text)
+                || String.IsNullOrEmpty(amountbox.Text)
+                || String.IsNullOrEmpty(pricebox.Text)
+                || String.IsNullOrEmpty(statusbox.Text)
+               )
+            {
+                MessageBox.Show(" Please Provide all informations");
+            }
+            else
+            {
+                int check;
+
+                if (int.TryParse(amountbox.Text, out check) && int.TryParse(pricebox.Text, out check))
+                {
+
+                    SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                    conn.Open();
+                    string query1 = "update  Product set Name= '" +namebox.Text+ "' , amount = '" + amountbox.Text + "', Price='" + pricebox.Text + "' ,Status='" + statusbox.Text + "', Categories='" + categoriesbox.Text + "' where id ='" + idbox.Text + "'";
+                    SqlCommand cmd = new SqlCommand(query1, conn);
+                    int row = cmd.ExecuteNonQuery();
+                    if (row == 1)
+                    {
+                        MessageBox.Show("Product info updated Successfully");
+                        namebox.Clear();
+                        idbox.Clear();
+                        categoriesbox.Clear();
+                        amountbox.Clear();
+                        statusbox.SelectedItem = null;
+                        pricebox.Clear();
+                        table1();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Try Again ");
+                    }
+                    conn.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("INVALID Data type");
+                }
+            }
         }
     }
 }
