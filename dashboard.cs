@@ -185,28 +185,26 @@ namespace SUNNAH_STATION_PROJECT
                 if (int.TryParse(amount, out am) && int.TryParse(price, out am))
                     {
 
-                        
-                            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-                            conn.Open();
-                            string query1 = "insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')";
-                            SqlCommand cmd = new SqlCommand(query1, conn);
-                            int row = cmd.ExecuteNonQuery();
+
+                    dbconn("insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')");
+
                             if (row == 1)
                             {
                                 MessageBox.Show("Product added Successfully");
-
+                            
                                 textBox1.Clear();
                                 textBox2.Clear();
                                 textBox3.Clear();
                                 textBox4.Clear();
                                 textBox5.Clear();
-
+                                row = 0;
                             }
+
                             else
                             {
                                 MessageBox.Show("Try Again ");
                             }
-                            conn.Close();
+                            
 
                      }
                 else
@@ -247,6 +245,16 @@ namespace SUNNAH_STATION_PROJECT
             table1();
         }
 
+        int row;
+        private void dbconn (string q)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+            conn.Open();
+            string qu = q; 
+            SqlCommand cmd = new SqlCommand(qu, conn);
+            row = cmd.ExecuteNonQuery();
+            conn.Close();
+        }
         private void SaveandUpdate_Click(object sender, EventArgs e)
         {
 
@@ -266,11 +274,8 @@ namespace SUNNAH_STATION_PROJECT
                 if (int.TryParse(amountbox.Text, out check) && int.TryParse(pricebox.Text, out check))
                 {
 
-                    SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-                    conn.Open();
-                    string query1 = "update  Product set Name= '" +namebox.Text+ "' , amount = '" + amountbox.Text + "', Price='" + pricebox.Text + "' ,Status='" + statusbox.Text + "', Categories='" + categoriesbox.Text + "' where id ='" + idbox.Text + "'";
-                    SqlCommand cmd = new SqlCommand(query1, conn);
-                    int row = cmd.ExecuteNonQuery();
+                   dbconn("update  Product set Name= '" + namebox.Text + "' , amount = '" + amountbox.Text + "', Price='" + pricebox.Text + "' ," +
+                       "Status='" + statusbox.Text + "', Categories='" + categoriesbox.Text + "' where id ='" + idbox.Text + "'");
                     if (row == 1)
                     {
                         MessageBox.Show("Product info updated Successfully");
@@ -281,6 +286,7 @@ namespace SUNNAH_STATION_PROJECT
                         statusbox.SelectedItem = null;
                         pricebox.Clear();
                         table1();
+                        row = 0;
 
 
                     }
@@ -288,8 +294,8 @@ namespace SUNNAH_STATION_PROJECT
                     {
                         MessageBox.Show("Try Again ");
                     }
-                    conn.Close();
 
+                   
                 }
                 else
                 {
