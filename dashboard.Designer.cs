@@ -91,6 +91,7 @@ namespace SUNNAH_STATION_PROJECT
             this.updatecancle = new System.Windows.Forms.Button();
             this.deletebtn = new System.Windows.Forms.Button();
             this.deletcancle = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,6 +104,7 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.priceboxpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusboxpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountboxpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -305,12 +307,12 @@ namespace SUNNAH_STATION_PROJECT
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.bar;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(68, 227);
@@ -595,10 +597,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(274, 519);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 27);
+            this.label7.Size = new System.Drawing.Size(62, 23);
             this.label7.TabIndex = 17;
             this.label7.Text = "Name";
             this.label7.Visible = false;
@@ -619,10 +621,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(274, 587);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 27);
+            this.label8.Size = new System.Drawing.Size(30, 23);
             this.label8.TabIndex = 17;
             this.label8.Text = "ID";
             this.label8.Visible = false;
@@ -643,10 +645,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(546, 519);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 27);
+            this.label9.Size = new System.Drawing.Size(104, 23);
             this.label9.TabIndex = 17;
             this.label9.Text = "Categories";
             this.label9.Visible = false;
@@ -655,10 +657,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(822, 519);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 27);
+            this.label10.Size = new System.Drawing.Size(54, 23);
             this.label10.TabIndex = 19;
             this.label10.Text = "Price";
             this.label10.Visible = false;
@@ -679,10 +681,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(822, 585);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 27);
+            this.label11.Size = new System.Drawing.Size(65, 23);
             this.label11.TabIndex = 21;
             this.label11.Text = "Status";
             this.label11.Visible = false;
@@ -703,10 +705,10 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(546, 585);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 27);
+            this.label12.Size = new System.Drawing.Size(83, 23);
             this.label12.TabIndex = 23;
             this.label12.Text = "Amount";
             this.label12.Visible = false;
@@ -886,12 +888,21 @@ namespace SUNNAH_STATION_PROJECT
             this.deletcancle.Visible = false;
             this.deletcancle.Click += new System.EventHandler(this.deleteancle_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(230, -15);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(851, 83);
+            this.pictureBox5.TabIndex = 33;
+            this.pictureBox5.TabStop = false;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.Home_page;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.panel1);
@@ -948,6 +959,7 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.priceboxpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusboxpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountboxpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1011,5 +1023,6 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.Button updatecancle;
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.Button deletcancle;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

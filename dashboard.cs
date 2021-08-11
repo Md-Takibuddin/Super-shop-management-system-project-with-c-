@@ -149,6 +149,7 @@ namespace SUNNAH_STATION_PROJECT
             updatevisible(false);
             SaveandUpdate.Visible = false;
             updatecancle.Visible = false;
+            deletcancle.Visible = false;
 
             //visible end
 
@@ -202,7 +203,7 @@ namespace SUNNAH_STATION_PROJECT
 
                             else
                             {
-                                MessageBox.Show("Try Again ");
+                                MessageBox.Show("Try Again");
                             }
                             
 
@@ -298,14 +299,14 @@ namespace SUNNAH_STATION_PROJECT
                     }
                     else
                     {
-                        MessageBox.Show("Try Again ");
+                        MessageBox.Show("Try Again");
                     }
 
                    
                 }
                 else
                 {
-                    MessageBox.Show("INVALID Data type");
+                    MessageBox.Show("INVALID Data type","WARNING");
                 }
             }
         }
@@ -333,12 +334,14 @@ namespace SUNNAH_STATION_PROJECT
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
+
             if ( idbox.Text == "")
             {
                 MessageBox.Show("Select the row you want to delete.");
             }
             else
             {
+               
                 string dq = "delete from Product where ID ='" +idbox.Text + "'";
                 dbconn(dq);
                 table1();

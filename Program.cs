@@ -16,7 +16,7 @@ namespace SUNNAH_STATION_PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboard());
+            Application.Run(new loginpage());
         }
     }
 }
