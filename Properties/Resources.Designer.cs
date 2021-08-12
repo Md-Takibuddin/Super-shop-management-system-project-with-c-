@@ -123,6 +123,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_order {
+            get {
+                object obj = ResourceManager.GetObject("delete order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delti {
             get {
                 object obj = ResourceManager.GetObject("delti", resourceCulture);
@@ -136,6 +146,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         internal static System.Drawing.Bitmap delti1 {
             get {
                 object obj = ResourceManager.GetObject("delti1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_a_order {
+            get {
+                object obj = ResourceManager.GetObject("edit a order", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         internal static System.Drawing.Bitmap order_icon {
             get {
                 object obj = ResourceManager.GetObject("order icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap place_order {
+            get {
+                object obj = ResourceManager.GetObject("place order", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

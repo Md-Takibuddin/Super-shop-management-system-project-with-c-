@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -159,10 +159,19 @@
     <None Include="Resources\b11.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\warningBAR.png" />
+    <None Include="Resources\place order.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\y2mate.com - Abstract business background newsroom geometric futuristic field white with black lines 1_1080p.gif" />
+    <None Include="Resources\delete order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit a order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit a order1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delti2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

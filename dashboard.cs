@@ -24,7 +24,9 @@ namespace SUNNAH_STATION_PROJECT
             this.Hide();
         }
 
-        private void productbuttion (bool y)
+
+
+        public void productbuttion (bool y)
         {
             producttable.Visible = y;
             addbt.Visible = y;
@@ -33,7 +35,7 @@ namespace SUNNAH_STATION_PROJECT
             refrashbt.Visible = y;
         }
 
-        private void table1()
+        public void table1()
         {
             SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
             conn.Open();
@@ -59,8 +61,8 @@ namespace SUNNAH_STATION_PROJECT
         {
             //visible 
             productbuttion(true);
-
             //visible-end 
+
 
 
             //create table 
@@ -234,17 +236,18 @@ namespace SUNNAH_STATION_PROJECT
 
         private void editbt_Click(object sender, EventArgs e)
         {
+            //visible
             updatevisible(true);
             SaveandUpdate.Visible = true;
             updatecancle.Visible = true;
             deletebtn.Visible = false;
             deletcancle.Visible = false;
 
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //visible
             updatevisible(false);
             productbuttion(true);
             table1();
@@ -327,6 +330,7 @@ namespace SUNNAH_STATION_PROJECT
 
         private void deleteancle_Click(object sender, EventArgs e)
         {
+            //visible
             updatevisible(false);
             deletebtn.Visible = false;
             deletcancle.Visible = false;
@@ -356,5 +360,45 @@ namespace SUNNAH_STATION_PROJECT
 
             }
         }
+
+        private void productallvisibal(bool x)
+        {
+            deletebtn.Visible = x;
+            addproduct(x);
+            productbuttion(x);
+            updatevisible(x);
+            SaveandUpdate.Visible = x;
+            updatecancle.Visible = x;
+            deletcancle.Visible = x;
+        }
+
+        private void ordertable1()
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+            conn.Open();
+
+            string query = "SELECT TOP (1000) [Oid] ,[Cname],[CMnumber],[Caddress],[Pid],[qty],[bill],[Paidamount],[due],[date],[paymathod],[status],[Adnote]FROM[SSDB].[dbo].[Order]";
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+
+            DataTable dt = ds.Tables[0];
+            ordertable.DataSource = dt;
+            ordertable.Refresh();
+            conn.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+
+        }
+
+      
     }
 }
