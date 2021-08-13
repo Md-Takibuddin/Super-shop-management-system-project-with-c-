@@ -173,5 +173,38 @@
   <ItemGroup>
     <None Include="Resources\delti2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dltf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refraf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barlinered.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

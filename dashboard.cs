@@ -59,17 +59,19 @@ namespace SUNNAH_STATION_PROJECT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //visible 
-            productbuttion(true);
-            //visible-end 
-
-
 
             //create table 
-
             table1();
-            
             //create table end
+
+            //visible 
+            productbuttion(true);
+            ordertable.Visible = false;
+            placeaorderbtn.Visible = false;
+            editaorder.Visible = false;
+            deleteaorder.Visible = false;
+            placeaordervisible(false);
+            //visible-end 
 
 
         }
@@ -377,7 +379,7 @@ namespace SUNNAH_STATION_PROJECT
             SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
             conn.Open();
 
-            string query = "SELECT TOP (1000) [Oid] ,[Cname],[CMnumber],[Caddress],[Pid],[qty],[bill],[Paidamount],[due],[date],[paymathod],[status],[Adnote]FROM[SSDB].[dbo].[Order]";
+            string query = "SELECT TOP (1000) [Oid] ,[Cname],[CMnumber],[Caddress],[Pid],[qty],[bill],[Paidamount],[due],[date],[paymathod],[status],[Adnote]FROM[SSDB].[dbo].[Orderinfo]";
 
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
@@ -393,12 +395,117 @@ namespace SUNNAH_STATION_PROJECT
             conn.Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void placeaordervisible(bool y)
         {
-            
+            label13.Visible = y;
+            label4.Visible = y;
+            label15.Visible = y;
+            label16.Visible = y;
+            label17.Visible = y;
+            label18.Visible = y;
+            label19.Visible = y;
+            label20.Visible = y;
+            label21.Visible = y;
+            label22.Visible = y;
+            label23.Visible = y;
+            label24.Visible = y;
+            label25.Visible = y;
+            orderidtxt.Visible = y;
+            dateTimePickerOrder.Visible = y;
+            cnametxt.Visible = y;
+            cmnumbertxt.Visible = y;
+            caddresstxt.Visible = y;
+            pidtxt.Visible = y;
+            qtytxt.Visible = y;
+            billtxt.Visible = y;
+            paidamounttxt.Visible = y;
+            duetxt.Visible = y;
+            notetxt.Visible = y;
+            paycombox.Visible = y;
+            statcomboxx.Visible = y;
+            ordersavebtn.Visible = y;
+            addordercanclebtn.Visible = y;
 
         }
 
-      
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //visibale
+            productbuttion(false);
+            ordertable1();
+            ordertable.Visible = true;
+            placeaorderbtn.Visible = true;
+            editaorder.Visible = true;
+            deleteaorder.Visible = true;
+
+
+
+
+        }
+
+        private void placeaorderbtn_Click(object sender, EventArgs e)
+        {
+            //visible
+            placeaordervisible(true);
+            ordertable.Visible = false;
+
+        }
+
+        private void ordersavebtn_Click(object sender, EventArgs e)
+        {
+           
+            
+
+
+            if (String.IsNullOrEmpty(orderidtxt.Text)
+                || String.IsNullOrEmpty(dateTimePickerOrder.Text)
+                || String.IsNullOrEmpty(cnametxt.Text)
+                || String.IsNullOrEmpty(caddresstxt.Text)
+                || String.IsNullOrEmpty(pidtxt.Text)
+                || String.IsNullOrEmpty(qtytxt.Text)
+                || String.IsNullOrEmpty(billtxt.Text)
+                || String.IsNullOrEmpty(paidamounttxt.Text)
+                || String.IsNullOrEmpty(paycombox.Text)
+                || String.IsNullOrEmpty(statcomboxx.Text)
+               )
+            {
+                MessageBox.Show(" Please Provide all informations");
+            }
+            else
+            {
+                
+
+                int check;
+
+                if (int.TryParse(qtytxt.Text, out check) && int.TryParse(billtxt.Text, out check) && int.TryParse(paidamounttxt.Text, out check) && int.TryParse(duetxt.Text, out check))
+                {
+
+
+                    dbconn("insert into Orderinfo(Oid, Cname, CMnumber, Caddress, Pid, qty, bill, Paidamount, due, date, paymathod, status, Adnote)" +
+                        " values('" + orderidtxt.Text + "', '" + cnametxt.Text + "','" + cmnumbertxt.Text + "', '" + caddresstxt.Text + "', '" + pidtxt.Text + "', '" + qtytxt.Text + "', '" + billtxt.Text + "', '" + paidamounttxt.Text + "', '" + duetxt.Text + "', '" + dateTimePickerOrder.Text + "', '" + paycombox.Text + "', '" + statcomboxx.Text + "', '" + notetxt.Text + "')");
+
+                    if (row == 1)
+                    {
+                        MessageBox.Show("Product added Successfully");
+
+                        
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Try Again");
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("INVALID Data type");
+                }
+
+
+
+            }
+        }
     }
 }

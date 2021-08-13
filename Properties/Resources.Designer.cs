@@ -63,9 +63,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_icon2 {
+        internal static System.Drawing.Bitmap adf {
             get {
-                object obj = ResourceManager.GetObject("add icon2", resourceCulture);
+                object obj = ResourceManager.GetObject("adf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +76,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         internal static System.Drawing.Bitmap analytics_icon {
             get {
                 object obj = ResourceManager.GetObject("analytics icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b1 {
+            get {
+                object obj = ResourceManager.GetObject("b1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +123,26 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barline {
+            get {
+                object obj = ResourceManager.GetObject("barline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barlinered {
+            get {
+                object obj = ResourceManager.GetObject("barlinered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_icon {
             get {
                 object obj = ResourceManager.GetObject("dashboard_icon", resourceCulture);
@@ -133,19 +163,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap delti {
+        internal static System.Drawing.Bitmap dltf {
             get {
-                object obj = ResourceManager.GetObject("delti", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap delti1 {
-            get {
-                object obj = ResourceManager.GetObject("delti1", resourceCulture);
+                object obj = ResourceManager.GetObject("dltf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +203,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap log_out {
+        internal static System.Drawing.Bitmap login_page_bg {
             get {
-                object obj = ResourceManager.GetObject("log out", resourceCulture);
+                object obj = ResourceManager.GetObject("login page bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +213,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_page_bg {
+        internal static System.Drawing.Bitmap logout {
             get {
-                object obj = ResourceManager.GetObject("login page bg", resourceCulture);
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +263,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap refrash {
+        internal static System.Drawing.Bitmap refraf {
             get {
-                object obj = ResourceManager.GetObject("refrash", resourceCulture);
+                object obj = ResourceManager.GetObject("refraf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +303,9 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap upi {
+        internal static System.Drawing.Bitmap upf1 {
             get {
-                object obj = ResourceManager.GetObject("upi", resourceCulture);
+                object obj = ResourceManager.GetObject("upf1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
