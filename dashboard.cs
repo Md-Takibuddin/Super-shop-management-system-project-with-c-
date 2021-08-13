@@ -398,7 +398,7 @@ namespace SUNNAH_STATION_PROJECT
         private void placeaordervisible(bool y)
         {
             label13.Visible = y;
-            label4.Visible = y;
+            label14.Visible = y;
             label15.Visible = y;
             label16.Visible = y;
             label17.Visible = y;
@@ -437,6 +437,17 @@ namespace SUNNAH_STATION_PROJECT
             placeaorderbtn.Visible = true;
             editaorder.Visible = true;
             deleteaorder.Visible = true;
+            placeaordervisible(false) ;
+            addproduct(false);
+            updatevisible(false);
+            SaveandUpdate.Visible = false;
+            updatecancle.Visible = false;
+            deletebtn.Visible = false;
+            deletcancle.Visible = false;
+            deletebtn.Visible = false;
+            updatevisible(false);
+            SaveandUpdate.Visible = false;
+            deletcancle.Visible = false;
 
 
 
@@ -486,7 +497,9 @@ namespace SUNNAH_STATION_PROJECT
 
                     if (row == 1)
                     {
-                        MessageBox.Show("Product added Successfully");
+
+                        MessageBox.Show("Order added Successfully.");
+                        row = 0;
 
                         
                     }
@@ -506,6 +519,59 @@ namespace SUNNAH_STATION_PROJECT
 
 
             }
+        }
+
+        private void addordercanclebtn_Click(object sender, EventArgs e)
+        {
+            placeaordervisible(false);
+            ordertable.Visible = true;
+        }
+        string deleteid;
+        private void ordertable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                 deleteid = ordertable.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            }
+           
+        }
+
+        private void deleteaorder_Click(object sender, EventArgs e)
+        {
+            deleteorder.Visible = true;
+            deleteordercancle.Visible = true;
+
+        }
+
+        private void deleteorder_Click(object sender, EventArgs e)
+        {
+            if (deleteid == "")
+            {
+                MessageBox.Show("Select a row you want to delete.");
+            }
+            else
+            {
+
+                string dq = "delete from Orderinfo where Oid ='" + deleteid + "'";
+                dbconn(dq);
+                ordertable1();
+                deleteid = "";
+                row = 0;
+                MessageBox.Show("Selected Order is Deleted successfully. ");
+            }
+        }
+
+        private void deleteordercancle_Click(object sender, EventArgs e)
+        {
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
+        }
+
+        private void editaorder_Click(object sender, EventArgs e)
+        {
+            orderedit.Visible = true;
+            ordereditcancle.Visible = true;
         }
     }
 }

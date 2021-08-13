@@ -133,6 +133,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barline_orange {
+            get {
+                object obj = ResourceManager.GetObject("barline orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barlinered {
             get {
                 object obj = ResourceManager.GetObject("barlinered", resourceCulture);
@@ -216,6 +226,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         internal static System.Drawing.Bitmap logout {
             get {
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orangbar {
+            get {
+                object obj = ResourceManager.GetObject("orangbar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

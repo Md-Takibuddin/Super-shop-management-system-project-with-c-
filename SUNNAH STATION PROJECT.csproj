@@ -206,5 +206,17 @@
   <ItemGroup>
     <None Include="Resources\barlinered.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete order1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit a order2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orangbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barline orange.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
