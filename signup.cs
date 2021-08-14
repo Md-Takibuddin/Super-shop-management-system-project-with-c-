@@ -52,18 +52,37 @@ namespace SUNNAH_STATION_PROJECT
 
                 SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
                 conn.Open();
-                string query = "insert into Signup (Name,Email, Password, SecurityCode) values('" + Name + "','" + Email + "', '" + Password + "', '" + SecurityCode + "')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                int row = cmd.ExecuteNonQuery();
-                if (row == 1)
+                string checkcode = " delete from code where scode = '" + textsc.Text + "'";
+                SqlCommand cmd = new SqlCommand(checkcode, conn);
+                int checksc = cmd.ExecuteNonQuery();
+                if (checksc == 1)
                 {
-                    MessageBox.Show(" Sign up Complate ");
+                    try
+                    {
+                        string query = "insert into Signup (Name,Email, Password, SecurityCode) values('" + Name + "','" + Email + "', '" + Password + "', '" + SecurityCode + "')";
+                        SqlCommand cmd1 = new SqlCommand(query, conn);
+                        cmd1.ExecuteNonQuery();
+                        MessageBox.Show(" Congratulations. Your Signup is successful.");
+                        conn.Close();
+                        textname.Clear();
+                        textemail.Clear();
+                        textpassword.Clear();
+                        textsc.Clear();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("E-mail ID already Exist.");
+                        string query = "insert into code (scode) values('" + SecurityCode + "')";
+                        SqlCommand cmd2 = new SqlCommand(query, conn);
+                        cmd2.ExecuteNonQuery();
+
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(" Sign up not Complate ");
+                    MessageBox.Show("Invalid Code. Try Again");
                 }
-                conn.Close();
             }
             
 

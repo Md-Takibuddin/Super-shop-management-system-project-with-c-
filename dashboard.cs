@@ -540,6 +540,7 @@ namespace SUNNAH_STATION_PROJECT
         {
             placeaordervisible(false);
             ordertable.Visible = true;
+            ordertable1();
         }
 
         private void clearedit()
