@@ -71,6 +71,9 @@ namespace SUNNAH_STATION_PROJECT
             editaorder.Visible = false;
             deleteaorder.Visible = false;
             placeaordervisible(false);
+
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
             //visible-end 
 
 
@@ -260,12 +263,19 @@ namespace SUNNAH_STATION_PROJECT
         int row;
         private void dbconn (string q)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-            conn.Open();
-            string qu = q; 
-            SqlCommand cmd = new SqlCommand(qu, conn);
-            row = cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                conn.Open();
+                string qu = q;
+                SqlCommand cmd = new SqlCommand(qu, conn);
+                row = cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Provided ID already exist.");
+            }
         }
         private void SaveandUpdate_Click(object sender, EventArgs e)
         {
@@ -448,6 +458,8 @@ namespace SUNNAH_STATION_PROJECT
             updatevisible(false);
             SaveandUpdate.Visible = false;
             deletcancle.Visible = false;
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
 
 
 
@@ -459,14 +471,14 @@ namespace SUNNAH_STATION_PROJECT
             //visible
             placeaordervisible(true);
             ordertable.Visible = false;
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
 
         }
 
         private void ordersavebtn_Click(object sender, EventArgs e)
         {
            
-            
-
 
             if (String.IsNullOrEmpty(orderidtxt.Text)
                 || String.IsNullOrEmpty(dateTimePickerOrder.Text)
@@ -500,8 +512,10 @@ namespace SUNNAH_STATION_PROJECT
 
                         MessageBox.Show("Order added Successfully.");
                         row = 0;
+                        clearedit();
 
-                        
+
+
                     }
 
                     else
@@ -526,12 +540,114 @@ namespace SUNNAH_STATION_PROJECT
             placeaordervisible(false);
             ordertable.Visible = true;
         }
-        string deleteid;
+
+        private void clearedit()
+        {
+            orderidtxt.Clear();
+            cnametxt.Clear();
+            cmnumbertxt.Clear();
+            caddresstxt.Clear();
+            pidtxt.Clear();
+            qtytxt.Clear();
+            billtxt.Clear();
+            paidamounttxt.Clear();
+            duetxt.Clear();
+            notetxt.Clear();
+            paycombox.SelectedItem = null;
+            statcomboxx.SelectedItem = null;
+        }
+
+
+        string Oid_v, Cname_v, CMnumber_v, Caddress_v, Pid_v, qty_v, bill_v, Paidamount_v,date_v, paymathod_v, due_v = "",   status_v, Adnote_v="";
+
+        private void ordereditsavebtn_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(orderidtxt.Text)
+               || String.IsNullOrEmpty(dateTimePickerOrder.Text)
+               || String.IsNullOrEmpty(cnametxt.Text)
+               || String.IsNullOrEmpty(caddresstxt.Text)
+               || String.IsNullOrEmpty(pidtxt.Text)
+               || String.IsNullOrEmpty(qtytxt.Text)
+               || String.IsNullOrEmpty(billtxt.Text)
+               || String.IsNullOrEmpty(paidamounttxt.Text)
+               || String.IsNullOrEmpty(paycombox.Text)
+               || String.IsNullOrEmpty(statcomboxx.Text)
+              )
+            {
+                MessageBox.Show(" Please Provide all informations");
+            }
+            else
+            {
+
+
+                int check;
+                row = 0;
+
+                if (int.TryParse(qtytxt.Text, out check) && int.TryParse(billtxt.Text, out check) && int.TryParse(paidamounttxt.Text, out check) && int.TryParse(duetxt.Text, out check))
+                {
+
+
+                    dbconn("update Orderinfo set Oid='" + orderidtxt.Text + "' , Cname='" + cnametxt.Text + "', CMnumber='" + cmnumbertxt.Text + "', Caddress='" + caddresstxt.Text + "', Pid='" + pidtxt.Text + "', qty='" + qtytxt.Text + "', bill='" + billtxt.Text + "', Paidamount='" +
+                        paidamounttxt.Text + "', due='" + duetxt.Text + "', paymathod='" + paycombox.Text + "', status='" + statcomboxx.Text + "', Adnote= '" + notetxt.Text + "' where Oid='" + orderidtxt.Text + "'");
+                    
+                    if (row == 1)
+                    {
+
+                        MessageBox.Show("Order info Updated Successfully.");
+
+                        clearedit();
+
+
+                        row = 0;
+
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("You can not change order id");
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("INVALID Data type");
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
         private void ordertable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                 deleteid = ordertable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Oid_v        = ordertable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Cname_v      = ordertable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                CMnumber_v   = ordertable.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Caddress_v   = ordertable.Rows[e.RowIndex].Cells[3].Value.ToString();
+                Pid_v        = ordertable.Rows[e.RowIndex].Cells[4].Value.ToString();
+                qty_v        = ordertable.Rows[e.RowIndex].Cells[5].Value.ToString();
+                bill_v       = ordertable.Rows[e.RowIndex].Cells[6].Value.ToString();
+                Paidamount_v = ordertable.Rows[e.RowIndex].Cells[7].Value.ToString();
+                date_v       = ordertable.Rows[e.RowIndex].Cells[9].Value.ToString();
+                paymathod_v = ordertable.Rows[e.RowIndex].Cells[10].Value.ToString();
+                due_v        = ordertable.Rows[e.RowIndex].Cells[8].Value.ToString();
+                status_v     = ordertable.Rows[e.RowIndex].Cells[11].Value.ToString();
+                Adnote_v     = ordertable.Rows[e.RowIndex].Cells[12].Value.ToString();
+
+
 
             }
            
@@ -539,26 +655,34 @@ namespace SUNNAH_STATION_PROJECT
 
         private void deleteaorder_Click(object sender, EventArgs e)
         {
+            //visibale
             deleteorder.Visible = true;
             deleteordercancle.Visible = true;
-
+            placeaordervisible(false);
+            ordertable.Visible = true;
+            placeaordervisible(false);
+            orderedit.Visible = false;
+            ordereditcancle.Visible = false;
+            ordereditsavebtn.Visible = false;
+            ordertable.Visible = true;
         }
 
         private void deleteorder_Click(object sender, EventArgs e)
         {
-            if (deleteid == "")
+            if (Oid_v == "")
             {
                 MessageBox.Show("Select a row you want to delete.");
             }
             else
             {
 
-                string dq = "delete from Orderinfo where Oid ='" + deleteid + "'";
+                string dq = "delete from Orderinfo where Oid ='" + Oid_v + "'";
                 dbconn(dq);
                 ordertable1();
-                deleteid = "";
+                Oid_v = "";
                 row = 0;
                 MessageBox.Show("Selected Order is Deleted successfully. ");
+                clearedit();
             }
         }
 
@@ -572,6 +696,51 @@ namespace SUNNAH_STATION_PROJECT
         {
             orderedit.Visible = true;
             ordereditcancle.Visible = true;
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
         }
+        private void ordereditcancle_Click(object sender, EventArgs e)
+        {
+            placeaordervisible(false);
+            orderedit.Visible = false;
+            ordereditcancle.Visible = false;
+            ordereditsavebtn.Visible = false;
+            ordertable.Visible = true;
+
+
+
+
+        }
+        private void orderedit_Click(object sender, EventArgs e)
+        {
+
+            placeaordervisible(true);
+            ordersavebtn.Visible = false;
+            addordercanclebtn.Visible = false;
+            ordertable.Visible = false;
+            dateTimePickerOrder.Visible = false;
+            label14.Visible = false;
+            orderedit.Visible = false;
+            ordereditsavebtn.Visible = true;
+            
+          
+
+            orderidtxt.Text = Oid_v;
+            cnametxt.Text = Cname_v;
+            cmnumbertxt.Text = CMnumber_v;
+            caddresstxt.Text = Caddress_v;
+            pidtxt.Text = Pid_v;
+            qtytxt.Text = qty_v;
+            billtxt.Text = bill_v;
+            paidamounttxt.Text = Paidamount_v;
+            duetxt.Text = due_v;
+            notetxt.Text = Adnote_v;
+            paycombox.Text = paymathod_v;
+            statcomboxx.Text = status_v;
+
+
+        }
+
+       
     }
 }

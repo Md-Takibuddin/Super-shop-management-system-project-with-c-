@@ -29,16 +29,16 @@ namespace SUNNAH_STATION_PROJECT
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -146,6 +146,7 @@ namespace SUNNAH_STATION_PROJECT
             this.deleteorder = new System.Windows.Forms.Button();
             this.ordereditcancle = new System.Windows.Forms.Button();
             this.orderedit = new System.Windows.Forms.Button();
+            this.ordereditsavebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -229,13 +230,13 @@ namespace SUNNAH_STATION_PROJECT
             this.producttable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.producttable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.producttable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bangaratno", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bangaratno", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.producttable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.producttable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.producttable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tname,
@@ -245,31 +246,31 @@ namespace SUNNAH_STATION_PROJECT
             this.tprice,
             this.tstat});
             this.producttable.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.NullValue = "-";
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.producttable.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.NullValue = "-";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.producttable.DefaultCellStyle = dataGridViewCellStyle3;
             this.producttable.EnableHeadersVisualStyles = false;
             this.producttable.GridColor = System.Drawing.Color.LightSkyBlue;
             this.producttable.Location = new System.Drawing.Point(263, 126);
             this.producttable.Name = "producttable";
             this.producttable.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.producttable.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.producttable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.producttable.RowHeadersVisible = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Transparent;
-            this.producttable.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Transparent;
+            this.producttable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.producttable.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.producttable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.producttable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -277,7 +278,7 @@ namespace SUNNAH_STATION_PROJECT
             this.producttable.RowTemplate.Height = 30;
             this.producttable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.producttable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.producttable.Size = new System.Drawing.Size(799, 405);
+            this.producttable.Size = new System.Drawing.Size(799, 390);
             this.producttable.TabIndex = 4;
             this.producttable.Visible = false;
             this.producttable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.producttable_CellClick);
@@ -285,9 +286,9 @@ namespace SUNNAH_STATION_PROJECT
             // tname
             // 
             this.tname.DataPropertyName = "Name";
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            this.tname.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.tname.DefaultCellStyle = dataGridViewCellStyle2;
             this.tname.HeaderText = "Name";
             this.tname.Name = "tname";
             this.tname.ReadOnly = true;
@@ -472,7 +473,7 @@ namespace SUNNAH_STATION_PROJECT
             this.panel1.Location = new System.Drawing.Point(260, 172);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 352);
+            this.panel1.Size = new System.Drawing.Size(802, 347);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             // 
@@ -976,9 +977,9 @@ namespace SUNNAH_STATION_PROJECT
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pictureBox5.Location = new System.Drawing.Point(240, -39);
+            this.pictureBox5.Location = new System.Drawing.Point(-54, -143);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(880, 677);
+            this.pictureBox5.Size = new System.Drawing.Size(134, 610);
             this.pictureBox5.TabIndex = 35;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Visible = false;
@@ -991,13 +992,13 @@ namespace SUNNAH_STATION_PROJECT
             this.ordertable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ordertable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.ordertable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Bangaratno", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            this.ordertable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bangaratno", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.ordertable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ordertable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ordertable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderid,
@@ -1014,31 +1015,31 @@ namespace SUNNAH_STATION_PROJECT
             this.orderstatus,
             this.note});
             this.ordertable.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.NullValue = "-";
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ordertable.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.NullValue = "-";
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ordertable.DefaultCellStyle = dataGridViewCellStyle7;
             this.ordertable.EnableHeadersVisualStyles = false;
             this.ordertable.GridColor = System.Drawing.Color.LightSkyBlue;
             this.ordertable.Location = new System.Drawing.Point(261, 126);
             this.ordertable.Name = "ordertable";
             this.ordertable.ReadOnly = true;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ordertable.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ordertable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.ordertable.RowHeadersVisible = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Transparent;
-            this.ordertable.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Transparent;
+            this.ordertable.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.ordertable.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.ordertable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ordertable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -1668,6 +1669,7 @@ namespace SUNNAH_STATION_PROJECT
             this.ordereditcancle.Text = "Cancle";
             this.ordereditcancle.UseVisualStyleBackColor = false;
             this.ordereditcancle.Visible = false;
+            this.ordereditcancle.Click += new System.EventHandler(this.ordereditcancle_Click);
             // 
             // orderedit
             // 
@@ -1686,16 +1688,38 @@ namespace SUNNAH_STATION_PROJECT
             this.orderedit.Text = "Edit";
             this.orderedit.UseVisualStyleBackColor = false;
             this.orderedit.Visible = false;
+            this.orderedit.Click += new System.EventHandler(this.orderedit_Click);
+            // 
+            // ordereditsavebtn
+            // 
+            this.ordereditsavebtn.BackColor = System.Drawing.Color.Transparent;
+            this.ordereditsavebtn.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.orangbar;
+            this.ordereditsavebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ordereditsavebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordereditsavebtn.FlatAppearance.BorderSize = 0;
+            this.ordereditsavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordereditsavebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordereditsavebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ordereditsavebtn.Location = new System.Drawing.Point(901, 585);
+            this.ordereditsavebtn.Name = "ordereditsavebtn";
+            this.ordereditsavebtn.Size = new System.Drawing.Size(129, 34);
+            this.ordereditsavebtn.TabIndex = 101;
+            this.ordereditsavebtn.Text = "Save";
+            this.ordereditsavebtn.UseVisualStyleBackColor = false;
+            this.ordereditsavebtn.Visible = false;
+            this.ordereditsavebtn.Click += new System.EventHandler(this.ordereditsavebtn_Click);
             // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.Home_page;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.producttable);
+            this.Controls.Add(this.ordereditsavebtn);
             this.Controls.Add(this.ordereditcancle);
             this.Controls.Add(this.orderedit);
-            this.Controls.Add(this.ordertable);
             this.Controls.Add(this.deleteordercancle);
             this.Controls.Add(this.deleteorder);
             this.Controls.Add(this.addordercanclebtn);
@@ -1733,7 +1757,6 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.add);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.deletcancle);
-            this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.updatecancle);
             this.Controls.Add(this.SaveandUpdate);
             this.Controls.Add(this.label7);
@@ -1768,8 +1791,9 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.idboxpic);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.producttable);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.ordertable);
+            this.Controls.Add(this.deletebtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1903,5 +1927,6 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.Button deleteorder;
         private System.Windows.Forms.Button ordereditcancle;
         private System.Windows.Forms.Button orderedit;
+        private System.Windows.Forms.Button ordereditsavebtn;
     }
 }
