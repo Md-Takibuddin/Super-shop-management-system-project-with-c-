@@ -83,6 +83,26 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asset_1 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_3 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1 {
             get {
                 object obj = ResourceManager.GetObject("b1", resourceCulture);
@@ -163,6 +183,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashbord_bar {
+            get {
+                object obj = ResourceManager.GetObject("dashbord bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_order {
             get {
                 object obj = ResourceManager.GetObject("delete order", resourceCulture);
@@ -186,6 +216,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         internal static System.Drawing.Bitmap edit_a_order {
             get {
                 object obj = ResourceManager.GetObject("edit a order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_gif_maker_1_ {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-gif-maker(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

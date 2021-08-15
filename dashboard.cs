@@ -76,6 +76,7 @@ namespace SUNNAH_STATION_PROJECT
             deleteaorder.Visible = false;
             placeaordervisible(false);
 
+            dashboardvisibale(false);
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
             Ordersearchicon.Visible = false;
@@ -136,7 +137,7 @@ namespace SUNNAH_STATION_PROJECT
 
         private void addproduct(bool x)
         {
-            panel1.Visible = x;
+            //panel1.Visible = x;
             Nametextbox.Visible = x;
             textBox1.Visible = x;
             label2.Visible = x;
@@ -229,9 +230,7 @@ namespace SUNNAH_STATION_PROJECT
                     MessageBox.Show("INVALID Data type");
                 }
                 
-                
-
-            }
+           }
 
 
         }
@@ -475,6 +474,7 @@ namespace SUNNAH_STATION_PROJECT
             OrderSearchbox.Visible = true;
             OrderSearchcom.Visible = true;
             panel3.Visible = true;
+            dashboardvisibale(false);
 
 
 
@@ -581,6 +581,119 @@ namespace SUNNAH_STATION_PROJECT
 
 
         string Oid_v, Cname_v, CMnumber_v, Caddress_v, Pid_v, qty_v, bill_v, Paidamount_v,date_v, paymathod_v, due_v = "",   status_v, Adnote_v="";
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboardvisibale(bool x)
+        {
+            dashbordtopbar.Visible = x;
+            totalproduct.Visible = x;
+            totalorder.Visible = x;
+            totalreceived.Visible = x;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            ordertable.Visible = false;
+            placeaorderbtn.Visible = false;
+            editaorder.Visible = false;
+            deleteaorder.Visible = false; 
+            Ordersearchicon.Visible = false;
+            OrderSearchbox.Visible = false;
+            OrderSearchcom.Visible = false;
+            panel3.Visible = false;
+            productbuttion(false);
+            dashboardvisibale(true);
+
+
+            //total Product
+            dashboardvisibale(true);
+            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+            conn.Open();
+
+            string query = "select * from Product";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+            DataTable dt_tp = ds.Tables[0];
+            totalproduct.Text = dt_tp.Rows.Count.ToString();
+
+            //-------------
+
+
+            //total order
+
+            string query2 = "SELECT * FROM Orderinfo";
+            SqlCommand cmd2 = new SqlCommand(query2, conn);
+            cmd2.ExecuteNonQuery();
+            SqlDataAdapter adp2 = new SqlDataAdapter(cmd2);
+            DataSet ds2 = new DataSet();
+            adp2.Fill(ds2);
+            DataTable dt_to = ds2.Tables[0];
+            totalorder.Text = dt_to.Rows.Count.ToString();
+
+            //-------------
+
+            //total paidamount
+            ordertable1();
+            string query3 = "select sum (Paidamount) from orderinfo;";
+            SqlCommand cmd3 = new SqlCommand(query3, conn);
+            cmd3.ExecuteNonQuery();
+            SqlDataAdapter adp3 = new SqlDataAdapter(cmd3);
+            DataSet ds3 = new DataSet();
+            adp3.Fill(ds3);
+            DataTable dt_tr = ds3.Tables[0];
+            ordertable.DataSource = dt_tr;
+            ordertable.Refresh();  
+            totalreceived.Text = Convert.ToString(ordertable.Rows[0].Cells[0].Value);
+
+            //----------------
+            string query4 = "SELECT * FROM Orderinfo where status = 'Pending';";
+            SqlCommand cmd4 = new SqlCommand(query4, conn);
+            cmd4.ExecuteNonQuery();
+            SqlDataAdapter adp4 = new SqlDataAdapter(cmd4);
+            DataSet ds4 = new DataSet();
+            adp4.Fill(ds4);
+            DataTable dt_4 = ds4.Tables[0];
+            pendingnumber.Text = dt_4.Rows.Count.ToString();
+            //----------------
+            string query5 = "SELECT * FROM Orderinfo where status = 'Confirmed';";
+            SqlCommand cmd5 = new SqlCommand(query5, conn);
+            cmd4.ExecuteNonQuery();
+            SqlDataAdapter adp5 = new SqlDataAdapter(cmd5);
+            DataSet ds5 = new DataSet();
+            adp5.Fill(ds5);
+            DataTable dt_5 = ds5.Tables[0];
+            confirmednumber.Text = dt_5.Rows.Count.ToString();
+            //----------------
+            string query6 = "SELECT * FROM Orderinfo where status = 'Placed';";
+            SqlCommand cmd6 = new SqlCommand(query6, conn);
+            cmd4.ExecuteNonQuery();
+            SqlDataAdapter adp6 = new SqlDataAdapter(cmd6);
+            DataSet ds6 = new DataSet();
+            adp4.Fill(ds6);
+            DataTable dt_6 = ds6.Tables[0];
+            placednumber.Text = dt_6.Rows.Count.ToString();
+            //----------------
+            string query7 = "SELECT * FROM Orderinfo where status = 'Delivered';";
+            SqlCommand cmd7 = new SqlCommand(query7, conn);
+            cmd7.ExecuteNonQuery();
+            SqlDataAdapter adp7 = new SqlDataAdapter(cmd7);
+            DataSet ds7 = new DataSet();
+            adp4.Fill(ds7);
+            DataTable dt_7 = ds7.Tables[0];
+            deliverednumber.Text = dt_7.Rows.Count.ToString();
+
+
+
+
+            conn.Close();
+        }
 
         private void OrderSearchbox_TextChanged(object sender, EventArgs e)
         {

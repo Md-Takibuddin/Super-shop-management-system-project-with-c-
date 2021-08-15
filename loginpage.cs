@@ -34,8 +34,8 @@ namespace SUNNAH_STATION_PROJECT
                 adp.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
-                    new dashboard().Show();
-                    this.Hide();
+                    new welcome().Show();
+                    
 
                 }
                 else

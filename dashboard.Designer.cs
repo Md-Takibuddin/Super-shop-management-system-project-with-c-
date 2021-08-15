@@ -34,11 +34,11 @@ namespace SUNNAH_STATION_PROJECT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,19 +57,6 @@ namespace SUNNAH_STATION_PROJECT
             this.refrashbt = new System.Windows.Forms.Button();
             this.editbt = new System.Windows.Forms.Button();
             this.deletebt = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Nametextbox = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.nameboxpic = new System.Windows.Forms.PictureBox();
             this.Cancel = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
@@ -153,12 +140,33 @@ namespace SUNNAH_STATION_PROJECT
             this.panel2 = new System.Windows.Forms.Panel();
             this.Ordersearchicon = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.Nametextbox = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dashbordtopbar = new System.Windows.Forms.PictureBox();
+            this.totalproduct = new System.Windows.Forms.TextBox();
+            this.totalorder = new System.Windows.Forms.TextBox();
+            this.totalreceived = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pendingnumber = new System.Windows.Forms.Label();
+            this.confirmednumber = new System.Windows.Forms.Label();
+            this.placednumber = new System.Windows.Forms.Label();
+            this.deliverednumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.producttable)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nameboxpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idboxpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesboxpic)).BeginInit();
@@ -168,6 +176,8 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.ordertable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Productsearchicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ordersearchicon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashbordtopbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -188,7 +198,7 @@ namespace SUNNAH_STATION_PROJECT
             this.pictureBox1.Location = new System.Drawing.Point(10, 150);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -431,194 +441,6 @@ namespace SUNNAH_STATION_PROJECT
             this.deletebt.UseVisualStyleBackColor = false;
             this.deletebt.Visible = false;
             this.deletebt.Click += new System.EventHandler(this.deletebt_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(191, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(552, 34);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Visible = false;
-            // 
-            // Nametextbox
-            // 
-            this.Nametextbox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Nametextbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Nametextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nametextbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Nametextbox.Image = ((System.Drawing.Image)(resources.GetObject("Nametextbox.Image")));
-            this.Nametextbox.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.Nametextbox.Location = new System.Drawing.Point(46, 45);
-            this.Nametextbox.Name = "Nametextbox";
-            this.Nametextbox.Size = new System.Drawing.Size(145, 34);
-            this.Nametextbox.TabIndex = 12;
-            this.Nametextbox.Text = "Name";
-            this.Nametextbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Nametextbox.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.Nametextbox);
-            this.panel1.Location = new System.Drawing.Point(260, 172);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 347);
-            this.panel1.TabIndex = 0;
-            this.panel1.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 25;
-            this.comboBox1.Items.AddRange(new object[] {
-            "In Stock",
-            "Out of Stock"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 33);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Visible = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(191, 245);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(552, 34);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label6.Location = new System.Drawing.Point(45, 298);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 34);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Status";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label5.Location = new System.Drawing.Point(46, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 34);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Price";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Visible = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(191, 196);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(552, 34);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label4.Location = new System.Drawing.Point(46, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 34);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Amount";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(191, 146);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(552, 34);
-            this.textBox3.TabIndex = 11;
-            this.textBox3.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Location = new System.Drawing.Point(46, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 34);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Categories";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(191, 94);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(552, 34);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label2.Location = new System.Drawing.Point(46, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 34);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ID";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Visible = false;
             // 
             // nameboxpic
             // 
@@ -1009,7 +831,7 @@ namespace SUNNAH_STATION_PROJECT
             this.ordertable.DefaultCellStyle = dataGridViewCellStyle16;
             this.ordertable.EnableHeadersVisualStyles = false;
             this.ordertable.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.ordertable.Location = new System.Drawing.Point(261, 129);
+            this.ordertable.Location = new System.Drawing.Point(257, 129);
             this.ordertable.Name = "ordertable";
             this.ordertable.ReadOnly = true;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1800,6 +1622,295 @@ namespace SUNNAH_STATION_PROJECT
             this.panel3.TabIndex = 108;
             this.panel3.Visible = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.bar;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(68, 159);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 34);
+            this.button4.TabIndex = 109;
+            this.button4.Text = "Dashboard";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // Nametextbox
+            // 
+            this.Nametextbox.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Nametextbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Nametextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nametextbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Nametextbox.Image = ((System.Drawing.Image)(resources.GetObject("Nametextbox.Image")));
+            this.Nametextbox.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Nametextbox.Location = new System.Drawing.Point(276, 176);
+            this.Nametextbox.Name = "Nametextbox";
+            this.Nametextbox.Size = new System.Drawing.Size(145, 34);
+            this.Nametextbox.TabIndex = 12;
+            this.Nametextbox.Text = "Name";
+            this.Nametextbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Nametextbox.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox1.Location = new System.Drawing.Point(421, 176);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(552, 34);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label2.Location = new System.Drawing.Point(276, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 34);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(421, 225);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(552, 34);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label3.Location = new System.Drawing.Point(276, 277);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 34);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Categories";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(421, 277);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(552, 34);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Location = new System.Drawing.Point(276, 327);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 34);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Amount";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(421, 327);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(552, 34);
+            this.textBox4.TabIndex = 11;
+            this.textBox4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label5.Location = new System.Drawing.Point(276, 376);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 34);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Price";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.Location = new System.Drawing.Point(275, 429);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 34);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Status";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(421, 376);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(552, 34);
+            this.textBox5.TabIndex = 11;
+            this.textBox5.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.ItemHeight = 25;
+            this.comboBox1.Items.AddRange(new object[] {
+            "In Stock",
+            "Out of Stock"});
+            this.comboBox1.Location = new System.Drawing.Point(421, 429);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 33);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.Visible = false;
+            // 
+            // dashbordtopbar
+            // 
+            this.dashbordtopbar.BackColor = System.Drawing.Color.White;
+            this.dashbordtopbar.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.dashbord_bar;
+            this.dashbordtopbar.Location = new System.Drawing.Point(312, 85);
+            this.dashbordtopbar.Name = "dashbordtopbar";
+            this.dashbordtopbar.Size = new System.Drawing.Size(692, 155);
+            this.dashbordtopbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dashbordtopbar.TabIndex = 110;
+            this.dashbordtopbar.TabStop = false;
+            // 
+            // totalproduct
+            // 
+            this.totalproduct.BackColor = System.Drawing.Color.LimeGreen;
+            this.totalproduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalproduct.ForeColor = System.Drawing.Color.Transparent;
+            this.totalproduct.Location = new System.Drawing.Point(360, 122);
+            this.totalproduct.Name = "totalproduct";
+            this.totalproduct.Size = new System.Drawing.Size(60, 28);
+            this.totalproduct.TabIndex = 112;
+            this.totalproduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // totalorder
+            // 
+            this.totalorder.BackColor = System.Drawing.Color.Orange;
+            this.totalorder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalorder.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalorder.ForeColor = System.Drawing.Color.Transparent;
+            this.totalorder.Location = new System.Drawing.Point(591, 122);
+            this.totalorder.Name = "totalorder";
+            this.totalorder.Size = new System.Drawing.Size(60, 28);
+            this.totalorder.TabIndex = 112;
+            this.totalorder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // totalreceived
+            // 
+            this.totalreceived.BackColor = System.Drawing.Color.Magenta;
+            this.totalreceived.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalreceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalreceived.ForeColor = System.Drawing.Color.Transparent;
+            this.totalreceived.Location = new System.Drawing.Point(796, 122);
+            this.totalreceived.Name = "totalreceived";
+            this.totalreceived.Size = new System.Drawing.Size(80, 28);
+            this.totalreceived.TabIndex = 112;
+            this.totalreceived.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.Asset_1;
+            this.pictureBox5.Location = new System.Drawing.Point(313, 246);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(691, 188);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 113;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pendingnumber
+            // 
+            this.pendingnumber.AutoSize = true;
+            this.pendingnumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pendingnumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pendingnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pendingnumber.Location = new System.Drawing.Point(391, 361);
+            this.pendingnumber.Name = "pendingnumber";
+            this.pendingnumber.Size = new System.Drawing.Size(46, 31);
+            this.pendingnumber.TabIndex = 114;
+            this.pendingnumber.Text = "10";
+            // 
+            // confirmednumber
+            // 
+            this.confirmednumber.AutoSize = true;
+            this.confirmednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.confirmednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmednumber.Location = new System.Drawing.Point(544, 361);
+            this.confirmednumber.Name = "confirmednumber";
+            this.confirmednumber.Size = new System.Drawing.Size(46, 31);
+            this.confirmednumber.TabIndex = 115;
+            this.confirmednumber.Text = "10";
+            // 
+            // placednumber
+            // 
+            this.placednumber.AutoSize = true;
+            this.placednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.placednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.placednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placednumber.Location = new System.Drawing.Point(708, 364);
+            this.placednumber.Name = "placednumber";
+            this.placednumber.Size = new System.Drawing.Size(46, 31);
+            this.placednumber.TabIndex = 116;
+            this.placednumber.Text = "10";
+            // 
+            // deliverednumber
+            // 
+            this.deliverednumber.AutoSize = true;
+            this.deliverednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deliverednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deliverednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliverednumber.Location = new System.Drawing.Point(849, 361);
+            this.deliverednumber.Name = "deliverednumber";
+            this.deliverednumber.Size = new System.Drawing.Size(46, 31);
+            this.deliverednumber.TabIndex = 117;
+            this.deliverednumber.Text = "10";
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1807,6 +1918,16 @@ namespace SUNNAH_STATION_PROJECT
             this.BackgroundImage = global::SUNNAH_STATION_PROJECT.Properties.Resources.Home_page;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.deliverednumber);
+            this.Controls.Add(this.placednumber);
+            this.Controls.Add(this.confirmednumber);
+            this.Controls.Add(this.pendingnumber);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.totalreceived);
+            this.Controls.Add(this.totalorder);
+            this.Controls.Add(this.totalproduct);
+            this.Controls.Add(this.dashbordtopbar);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Ordersearchicon);
             this.Controls.Add(this.panel2);
@@ -1814,7 +1935,6 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.Productsearchicon);
             this.Controls.Add(this.OrderSearchcom);
             this.Controls.Add(this.OrderSearchbox);
-            this.Controls.Add(this.ordertable);
             this.Controls.Add(this.searchcom);
             this.Controls.Add(this.ordereditsavebtn);
             this.Controls.Add(this.ordereditcancle);
@@ -1823,31 +1943,6 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.deleteorder);
             this.Controls.Add(this.addordercanclebtn);
             this.Controls.Add(this.ordersavebtn);
-            this.Controls.Add(this.statcomboxx);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.paycombox);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.notetxt);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.duetxt);
-            this.Controls.Add(this.dateTimePickerOrder);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.paidamounttxt);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.billtxt);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.qtytxt);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.pidtxt);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.caddresstxt);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.cmnumbertxt);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.cnametxt);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.orderidtxt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Cancel);
@@ -1883,14 +1978,51 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.categoriesboxpic);
             this.Controls.Add(this.nameboxpic);
             this.Controls.Add(this.idboxpic);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.placeaorderbtn);
             this.Controls.Add(this.deleteaorder);
             this.Controls.Add(this.editaorder);
+            this.Controls.Add(this.ordertable);
+            this.Controls.Add(this.statcomboxx);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.paycombox);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.notetxt);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.duetxt);
+            this.Controls.Add(this.dateTimePickerOrder);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.paidamounttxt);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.billtxt);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.qtytxt);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.pidtxt);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.caddresstxt);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.cmnumbertxt);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.cnametxt);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.orderidtxt);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Nametextbox);
             this.Controls.Add(this.producttable);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1900,8 +2032,6 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.producttable)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nameboxpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idboxpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesboxpic)).EndInit();
@@ -1911,6 +2041,8 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.ordertable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Productsearchicon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ordersearchicon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashbordtopbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1936,19 +2068,6 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.DataGridViewTextBoxColumn tamount;
         private System.Windows.Forms.DataGridViewTextBoxColumn tprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn tstat;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Nametextbox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.PictureBox nameboxpic;
@@ -2032,5 +2151,27 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox Ordersearchicon;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label Nametextbox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox dashbordtopbar;
+        private System.Windows.Forms.TextBox totalproduct;
+        private System.Windows.Forms.TextBox totalorder;
+        private System.Windows.Forms.TextBox totalreceived;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label pendingnumber;
+        private System.Windows.Forms.Label confirmednumber;
+        private System.Windows.Forms.Label placednumber;
+        private System.Windows.Forms.Label deliverednumber;
     }
 }

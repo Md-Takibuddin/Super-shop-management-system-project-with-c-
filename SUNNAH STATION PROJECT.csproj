@@ -71,6 +71,12 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -220,6 +229,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashbord bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7efs.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker%281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
