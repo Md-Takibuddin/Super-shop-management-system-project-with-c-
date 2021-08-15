@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SUNNAH_STATION_PROJECT
 {
     public partial class welcome : Form
@@ -21,7 +22,11 @@ namespace SUNNAH_STATION_PROJECT
         {
             new dashboard().Show();
             this.Hide();
+
             new loginpage().Hide();
+            dashboard d = new dashboard();
+            
+            d.dashboardclick();
         }
     }
 }

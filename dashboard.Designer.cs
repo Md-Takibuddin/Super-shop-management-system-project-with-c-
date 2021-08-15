@@ -43,7 +43,6 @@ namespace SUNNAH_STATION_PROJECT
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.producttable = new System.Windows.Forms.DataGridView();
             this.tname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,7 +164,6 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.producttable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameboxpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idboxpic)).BeginInit();
@@ -195,7 +193,7 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.dashboard_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 236);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 45);
@@ -207,7 +205,7 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.product_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 220);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 306);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 45);
@@ -219,25 +217,13 @@ namespace SUNNAH_STATION_PROJECT
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.order_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 290);
+            this.pictureBox3.Location = new System.Drawing.Point(13, 376);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::SUNNAH_STATION_PROJECT.Properties.Resources.analytics_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 360);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
             // 
             // producttable
             // 
@@ -388,7 +374,7 @@ namespace SUNNAH_STATION_PROJECT
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(68, 227);
+            this.button3.Location = new System.Drawing.Point(71, 313);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 7;
@@ -781,7 +767,7 @@ namespace SUNNAH_STATION_PROJECT
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(68, 296);
+            this.button1.Location = new System.Drawing.Point(71, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 34;
@@ -1632,7 +1618,7 @@ namespace SUNNAH_STATION_PROJECT
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(68, 159);
+            this.button4.Location = new System.Drawing.Point(71, 244);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 34);
             this.button4.TabIndex = 109;
@@ -1815,6 +1801,7 @@ namespace SUNNAH_STATION_PROJECT
             this.dashbordtopbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.dashbordtopbar.TabIndex = 110;
             this.dashbordtopbar.TabStop = false;
+            this.dashbordtopbar.Visible = false;
             // 
             // totalproduct
             // 
@@ -1827,6 +1814,7 @@ namespace SUNNAH_STATION_PROJECT
             this.totalproduct.Size = new System.Drawing.Size(60, 28);
             this.totalproduct.TabIndex = 112;
             this.totalproduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalproduct.Visible = false;
             // 
             // totalorder
             // 
@@ -1839,6 +1827,7 @@ namespace SUNNAH_STATION_PROJECT
             this.totalorder.Size = new System.Drawing.Size(60, 28);
             this.totalorder.TabIndex = 112;
             this.totalorder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalorder.Visible = false;
             // 
             // totalreceived
             // 
@@ -1851,6 +1840,7 @@ namespace SUNNAH_STATION_PROJECT
             this.totalreceived.Size = new System.Drawing.Size(80, 28);
             this.totalreceived.TabIndex = 112;
             this.totalreceived.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalreceived.Visible = false;
             // 
             // pictureBox5
             // 
@@ -1862,6 +1852,7 @@ namespace SUNNAH_STATION_PROJECT
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 113;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // pendingnumber
             // 
@@ -1869,11 +1860,13 @@ namespace SUNNAH_STATION_PROJECT
             this.pendingnumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pendingnumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pendingnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pendingnumber.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.pendingnumber.Location = new System.Drawing.Point(391, 361);
             this.pendingnumber.Name = "pendingnumber";
-            this.pendingnumber.Size = new System.Drawing.Size(46, 31);
+            this.pendingnumber.Size = new System.Drawing.Size(30, 31);
             this.pendingnumber.TabIndex = 114;
-            this.pendingnumber.Text = "10";
+            this.pendingnumber.Text = "0";
+            this.pendingnumber.Visible = false;
             // 
             // confirmednumber
             // 
@@ -1881,11 +1874,13 @@ namespace SUNNAH_STATION_PROJECT
             this.confirmednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.confirmednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmednumber.ForeColor = System.Drawing.Color.Turquoise;
             this.confirmednumber.Location = new System.Drawing.Point(544, 361);
             this.confirmednumber.Name = "confirmednumber";
-            this.confirmednumber.Size = new System.Drawing.Size(46, 31);
+            this.confirmednumber.Size = new System.Drawing.Size(30, 31);
             this.confirmednumber.TabIndex = 115;
-            this.confirmednumber.Text = "10";
+            this.confirmednumber.Text = "0";
+            this.confirmednumber.Visible = false;
             // 
             // placednumber
             // 
@@ -1893,11 +1888,13 @@ namespace SUNNAH_STATION_PROJECT
             this.placednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.placednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.placednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placednumber.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.placednumber.Location = new System.Drawing.Point(708, 364);
             this.placednumber.Name = "placednumber";
-            this.placednumber.Size = new System.Drawing.Size(46, 31);
+            this.placednumber.Size = new System.Drawing.Size(30, 31);
             this.placednumber.TabIndex = 116;
-            this.placednumber.Text = "10";
+            this.placednumber.Text = "0";
+            this.placednumber.Visible = false;
             // 
             // deliverednumber
             // 
@@ -1905,11 +1902,13 @@ namespace SUNNAH_STATION_PROJECT
             this.deliverednumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.deliverednumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deliverednumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliverednumber.ForeColor = System.Drawing.Color.YellowGreen;
             this.deliverednumber.Location = new System.Drawing.Point(849, 361);
             this.deliverednumber.Name = "deliverednumber";
-            this.deliverednumber.Size = new System.Drawing.Size(46, 31);
+            this.deliverednumber.Size = new System.Drawing.Size(30, 31);
             this.deliverednumber.TabIndex = 117;
-            this.deliverednumber.Text = "10";
+            this.deliverednumber.Text = "0";
+            this.deliverednumber.Visible = false;
             // 
             // dashboard
             // 
@@ -1956,7 +1955,6 @@ namespace SUNNAH_STATION_PROJECT
             this.Controls.Add(this.amountbox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.categoriesbox);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.idbox);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.namebox);
@@ -2030,7 +2028,6 @@ namespace SUNNAH_STATION_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.producttable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameboxpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idboxpic)).EndInit();
@@ -2054,7 +2051,6 @@ namespace SUNNAH_STATION_PROJECT
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridView producttable;
         private System.Windows.Forms.Button addbt;
         private System.Windows.Forms.Button button2;

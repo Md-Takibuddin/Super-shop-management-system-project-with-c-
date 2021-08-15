@@ -75,6 +75,7 @@ namespace SUNNAH_STATION_PROJECT
             editaorder.Visible = false;
             deleteaorder.Visible = false;
             placeaordervisible(false);
+            addproduct(false);
 
             dashboardvisibale(false);
             deleteorder.Visible = false;
@@ -340,9 +341,10 @@ namespace SUNNAH_STATION_PROJECT
             //visible
             deletebtn.Visible = true;
             updatevisible(true);
+            deletcancle.Visible = true;
             SaveandUpdate.Visible = false;
             updatecancle.Visible = false;
-            deletcancle.Visible = true;
+            
             //visible end
 
 
@@ -587,20 +589,27 @@ namespace SUNNAH_STATION_PROJECT
 
         }
 
-        private void dashboardvisibale(bool x)
+        public void dashboardvisibale(bool x)
         {
-            dashbordtopbar.Visible = x;
+
             totalproduct.Visible = x;
             totalorder.Visible = x;
             totalreceived.Visible = x;
+            pendingnumber.Visible = x;
+            confirmednumber.Visible = x;
+            placednumber.Visible = x;
+            deliverednumber.Visible = x;
+            pictureBox5.Visible = x;
+           
+            dashbordtopbar.Visible = x;
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        public void dashboardclick()
         {
             ordertable.Visible = false;
             placeaorderbtn.Visible = false;
             editaorder.Visible = false;
-            deleteaorder.Visible = false; 
+            deleteaorder.Visible = false;
             Ordersearchicon.Visible = false;
             OrderSearchbox.Visible = false;
             OrderSearchcom.Visible = false;
@@ -610,7 +619,7 @@ namespace SUNNAH_STATION_PROJECT
 
 
             //total Product
-            dashboardvisibale(true);
+        
             SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
             conn.Open();
 
@@ -649,7 +658,7 @@ namespace SUNNAH_STATION_PROJECT
             adp3.Fill(ds3);
             DataTable dt_tr = ds3.Tables[0];
             ordertable.DataSource = dt_tr;
-            ordertable.Refresh();  
+            ordertable.Refresh();
             totalreceived.Text = Convert.ToString(ordertable.Rows[0].Cells[0].Value);
 
             //----------------
@@ -685,14 +694,36 @@ namespace SUNNAH_STATION_PROJECT
             cmd7.ExecuteNonQuery();
             SqlDataAdapter adp7 = new SqlDataAdapter(cmd7);
             DataSet ds7 = new DataSet();
-            adp4.Fill(ds7);
+            adp7.Fill(ds7);
             DataTable dt_7 = ds7.Tables[0];
             deliverednumber.Text = dt_7.Rows.Count.ToString();
 
 
-
-
             conn.Close();
+        }
+        
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            dashboardclick();
+            dashboardvisibale(true);
+
+
+            //visibale
+            addproduct(false);
+            placeaordervisible(false);
+            deleteorder.Visible = false;
+            deleteordercancle.Visible = false;
+            ordertable.Visible = false;
+            updatevisible(false);
+            SaveandUpdate.Visible = false;
+            updatecancle.Visible = false;
+            deletebtn.Visible = false;
+            updatevisible(false);
+            deletcancle.Visible = false;
+            orderedit.Visible = false;
+            ordereditcancle.Visible = false;
+
+
         }
 
         private void OrderSearchbox_TextChanged(object sender, EventArgs e)
@@ -841,13 +872,13 @@ namespace SUNNAH_STATION_PROJECT
             //visibale
             deleteorder.Visible = true;
             deleteordercancle.Visible = true;
-            placeaordervisible(false);
             ordertable.Visible = true;
-            placeaordervisible(false);
+
+            placeaordervisible(false);                   
             orderedit.Visible = false;
             ordereditcancle.Visible = false;
             ordereditsavebtn.Visible = false;
-            ordertable.Visible = true;
+            
         }
 
         private void deleteorder_Click(object sender, EventArgs e)
