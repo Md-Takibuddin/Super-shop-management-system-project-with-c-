@@ -33,6 +33,10 @@ namespace SUNNAH_STATION_PROJECT
             editbt.Visible = y;
             deletebt.Visible = y;
             refrashbt.Visible = y;
+            searchcom.Visible = y;
+            searchbox.Visible = y;
+            Productsearchicon.Visible = y;
+            panel2.Visible = y;
         }
 
         public void table1()
@@ -74,6 +78,11 @@ namespace SUNNAH_STATION_PROJECT
 
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
+            Ordersearchicon.Visible = false;
+            OrderSearchbox.Visible = false;
+            OrderSearchcom.Visible = false;
+            panel3.Visible = false;
+            clearedit();
             //visible-end 
 
 
@@ -444,6 +453,7 @@ namespace SUNNAH_STATION_PROJECT
             //visibale
             productbuttion(false);
             ordertable1();
+            clearedit();
             ordertable.Visible = true;
             placeaorderbtn.Visible = true;
             editaorder.Visible = true;
@@ -461,6 +471,11 @@ namespace SUNNAH_STATION_PROJECT
             deletcancle.Visible = false;
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
+            Ordersearchicon.Visible = true;
+            OrderSearchbox.Visible = true;
+            OrderSearchcom.Visible = true;
+            panel3.Visible = true;
+
 
 
 
@@ -474,6 +489,10 @@ namespace SUNNAH_STATION_PROJECT
             ordertable.Visible = false;
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
+            Ordersearchicon.Visible = false;
+            OrderSearchbox.Visible = false;
+            OrderSearchcom.Visible = false;
+            panel3.Visible = false;
 
         }
 
@@ -541,6 +560,7 @@ namespace SUNNAH_STATION_PROJECT
             placeaordervisible(false);
             ordertable.Visible = true;
             ordertable1();
+            clearedit();
         }
 
         private void clearedit()
@@ -561,6 +581,62 @@ namespace SUNNAH_STATION_PROJECT
 
 
         string Oid_v, Cname_v, CMnumber_v, Caddress_v, Pid_v, qty_v, bill_v, Paidamount_v,date_v, paymathod_v, due_v = "",   status_v, Adnote_v="";
+
+        private void OrderSearchbox_TextChanged(object sender, EventArgs e)
+        {
+            SearchOrder(OrderSearchbox.Text);
+        }
+
+        public void SearchOrder(String Osearch)
+        {
+
+            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+            conn.Open();
+            string sq = "select * from Orderinfo where " + OrderSearchcom.Text + " like'%" + Osearch + "%'";
+
+            SqlCommand cmd = new SqlCommand(sq, conn);
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+
+            DataTable dt = ds.Tables[0];
+            ordertable.DataSource = dt;
+            //producttable.Refresh();
+            conn.Close();
+
+        }
+
+        private void searchbox_TextChanged(object sender, EventArgs e)
+        {
+            SearchProduct(searchbox.Text);
+        }
+
+        public void SearchProduct(String search)
+        {
+
+            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+            conn.Open();
+            string sq = "select * from Product where "+searchcom.Text+" like'%"+ search + "%'";
+
+            SqlCommand cmd = new SqlCommand(sq, conn);
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+
+            DataTable dt = ds.Tables[0];
+            producttable.DataSource = dt;
+            //producttable.Refresh();
+            conn.Close();
+
+        }
+
+      
 
         private void ordereditsavebtn_Click(object sender, EventArgs e)
         {
@@ -598,8 +674,6 @@ namespace SUNNAH_STATION_PROJECT
                         MessageBox.Show("Order info Updated Successfully.");
 
                         clearedit();
-
-
                         row = 0;
 
                     }
@@ -619,12 +693,6 @@ namespace SUNNAH_STATION_PROJECT
 
 
             }
-
-
-
-
-
-
 
 
 
@@ -708,6 +776,7 @@ namespace SUNNAH_STATION_PROJECT
             ordereditcancle.Visible = false;
             ordereditsavebtn.Visible = false;
             ordertable.Visible = true;
+            ordertable1();
 
 
 
