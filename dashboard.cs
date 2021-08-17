@@ -682,10 +682,10 @@ namespace SUNNAH_STATION_PROJECT
             //----------------
             string query6 = "SELECT * FROM Orderinfo where status = 'Placed';";
             SqlCommand cmd6 = new SqlCommand(query6, conn);
-            cmd4.ExecuteNonQuery();
+            cmd6.ExecuteNonQuery();
             SqlDataAdapter adp6 = new SqlDataAdapter(cmd6);
             DataSet ds6 = new DataSet();
-            adp4.Fill(ds6);
+            adp6.Fill(ds6);
             DataTable dt_6 = ds6.Tables[0];
             placednumber.Text = dt_6.Rows.Count.ToString();
             //----------------
@@ -733,23 +733,29 @@ namespace SUNNAH_STATION_PROJECT
 
         public void SearchOrder(String Osearch)
         {
+            try
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                conn.Open();
+                string sq = "select * from Orderinfo where " + OrderSearchcom.Text + " like'%" + Osearch + "%'";
 
-            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-            conn.Open();
-            string sq = "select * from Orderinfo where " + OrderSearchcom.Text + " like'%" + Osearch + "%'";
+                SqlCommand cmd = new SqlCommand(sq, conn);
+                cmd.ExecuteNonQuery();
 
-            SqlCommand cmd = new SqlCommand(sq, conn);
-            cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds);
 
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                ordertable.DataSource = dt;
 
-            DataTable dt = ds.Tables[0];
-            ordertable.DataSource = dt;
-            //producttable.Refresh();
-            conn.Close();
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("select a colume name ");
+            }
 
         }
 
@@ -760,24 +766,29 @@ namespace SUNNAH_STATION_PROJECT
 
         public void SearchProduct(String search)
         {
+            try
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                conn.Open();
+                string sq = "select * from Product where " + searchcom.Text + " like'%" + search + "%'";
 
-            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
-            conn.Open();
-            string sq = "select * from Product where "+searchcom.Text+" like'%"+ search + "%'";
+                SqlCommand cmd = new SqlCommand(sq, conn);
+                cmd.ExecuteNonQuery();
 
-            SqlCommand cmd = new SqlCommand(sq, conn);
-            cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds);
 
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
-
-            DataTable dt = ds.Tables[0];
-            producttable.DataSource = dt;
-            //producttable.Refresh();
-            conn.Close();
-
+                DataTable dt = ds.Tables[0];
+                producttable.DataSource = dt;
+                //producttable.Refresh();
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("select a colume name");
+            }
         }
 
       
