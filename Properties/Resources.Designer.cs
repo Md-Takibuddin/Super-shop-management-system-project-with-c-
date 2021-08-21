@@ -183,6 +183,16 @@ namespace SUNNAH_STATION_PROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashboard_top_bar {
+            get {
+                object obj = ResourceManager.GetObject("dashboard top bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashbord_bar {
             get {
                 object obj = ResourceManager.GetObject("dashbord bar", resourceCulture);

@@ -54,7 +54,9 @@ namespace SUNNAH_STATION_PROJECT
                 conn.Open();
                 string checkcode = " delete from code where scode = '" + textsc.Text + "'";
                 SqlCommand cmd = new SqlCommand(checkcode, conn);
+
                 int checksc = cmd.ExecuteNonQuery();
+
                 if (checksc == 1)
                 {
                     try

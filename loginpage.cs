@@ -32,9 +32,12 @@ namespace SUNNAH_STATION_PROJECT
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
+
                 if (dt.Rows.Count == 1)
                 {
                     new welcome().Show();
+                    this.Hide();
+                    
                     
 
                 }

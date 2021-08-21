@@ -172,7 +172,8 @@ namespace SUNNAH_STATION_PROJECT
             //visible end
 
         }
-
+        
+        //product insertion
         private void button1_Click(object sender, EventArgs e)
         {
             string name, id, amount, status, categories, price;
@@ -202,30 +203,29 @@ namespace SUNNAH_STATION_PROJECT
 
 
                 if (int.TryParse(amount, out am) && int.TryParse(price, out am))
+                {       
+
+                   dbconn("insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')");
+
+                    if (row == 1)
                     {
-
-
-                    dbconn("insert into Product (Name,ID, amount, Price,Status,Categories) values('" + name + "','" + id + "','" + amount + "', '" + price + "', '" + status + "','" + categories + "')");
-
-                            if (row == 1)
-                            {
-                                MessageBox.Show("Product added Successfully");
+                        MessageBox.Show("Product added Successfully");
                             
-                                textBox1.Clear();
-                                textBox2.Clear();
-                                textBox3.Clear();
-                                textBox4.Clear();
-                                textBox5.Clear();
-                                row = 0;
-                            }
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        textBox3.Clear();
+                        textBox4.Clear();
+                        textBox5.Clear();
+                        row = 0;
+                    }
 
-                            else
-                            {
-                                MessageBox.Show("Try Again");
-                            }
+                    else
+                    {
+                        MessageBox.Show("Try Again");
+                    }
                             
 
-                     }
+                }
                 else
                 {
                     MessageBox.Show("INVALID Data type");
@@ -461,14 +461,12 @@ namespace SUNNAH_STATION_PROJECT
             deleteaorder.Visible = true;
             placeaordervisible(false) ;
             addproduct(false);
-            updatevisible(false);
             SaveandUpdate.Visible = false;
             updatecancle.Visible = false;
             deletebtn.Visible = false;
             deletcancle.Visible = false;
             deletebtn.Visible = false;
             updatevisible(false);
-            SaveandUpdate.Visible = false;
             deletcancle.Visible = false;
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
@@ -526,18 +524,31 @@ namespace SUNNAH_STATION_PROJECT
                 {
 
 
-                    dbconn("insert into Orderinfo(Oid, Cname, CMnumber, Caddress, Pid, qty, bill, Paidamount, due, date, paymathod, status, Adnote)" +
-                        " values('" + orderidtxt.Text + "', '" + cnametxt.Text + "','" + cmnumbertxt.Text + "', '" + caddresstxt.Text + "', '" + pidtxt.Text + "', '" + qtytxt.Text + "', '" + billtxt.Text + "', '" + paidamounttxt.Text + "', '" + duetxt.Text + "', '" + dateTimePickerOrder.Text + "', '" + paycombox.Text + "', '" + statcomboxx.Text + "', '" + notetxt.Text + "')");
+                    dbconn("insert into Orderinfo(Oid, Cname, CMnumber, Caddress, Pid, qty, bill, Paidamount, due, date, paymathod, status, Adnote,checkcon)" +
+                        " values('" + orderidtxt.Text + "', '" + cnametxt.Text + "','" + cmnumbertxt.Text + "', '" + caddresstxt.Text + "', '" + pidtxt.Text + "', '" + qtytxt.Text + "', '" + billtxt.Text + "', '" + paidamounttxt.Text + "', '" + duetxt.Text + "', '" + dateTimePickerOrder.Text + "', '" + paycombox.Text + "', '" + statcomboxx.Text + "', '" + notetxt.Text + "','0')");
 
                     if (row == 1)
                     {
 
                         MessageBox.Show("Order added Successfully.");
                         row = 0;
+                    
+                     
+                        string st1 = statcomboxx.Text;
+                        string st2 = "Confirmed";
+                         
+
+
+                        if (String.Compare(st1, st2) == 0)
+                        {
+                            
+
+                           dbconn("UPDATE Product set amount = amount - '"+qtytxt.Text+"' where ID = '" + pidtxt.Text + "';");
+                           dbconn("UPDATE Product set check = '1' where ID = '" + pidtxt.Text + "';");
+
+                        }
+                        
                         clearedit();
-
-
-
                     }
 
                     else
@@ -623,13 +634,13 @@ namespace SUNNAH_STATION_PROJECT
             SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
             conn.Open();
 
-            string query = "select * from Product";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
-            DataTable dt_tp = ds.Tables[0];
+            string query1 = "select * from Product";
+            SqlCommand cmd1 = new SqlCommand(query1, conn);
+            cmd1.ExecuteNonQuery();
+            SqlDataAdapter adp1 = new SqlDataAdapter(cmd1);
+            DataSet ds1 = new DataSet();
+            adp1.Fill(ds1);
+            DataTable dt_tp = ds1.Tables[0];
             totalproduct.Text = dt_tp.Rows.Count.ToString();
 
             //-------------
@@ -658,7 +669,7 @@ namespace SUNNAH_STATION_PROJECT
             adp3.Fill(ds3);
             DataTable dt_tr = ds3.Tables[0];
             ordertable.DataSource = dt_tr;
-            ordertable.Refresh();
+            //ordertable.Refresh();
             totalreceived.Text = Convert.ToString(ordertable.Rows[0].Cells[0].Value);
 
             //----------------
@@ -673,7 +684,7 @@ namespace SUNNAH_STATION_PROJECT
             //----------------
             string query5 = "SELECT * FROM Orderinfo where status = 'Confirmed';";
             SqlCommand cmd5 = new SqlCommand(query5, conn);
-            cmd4.ExecuteNonQuery();
+            cmd5.ExecuteNonQuery();
             SqlDataAdapter adp5 = new SqlDataAdapter(cmd5);
             DataSet ds5 = new DataSet();
             adp5.Fill(ds5);
@@ -722,6 +733,7 @@ namespace SUNNAH_STATION_PROJECT
             deletcancle.Visible = false;
             orderedit.Visible = false;
             ordereditcancle.Visible = false;
+            ordereditsavebtn.Visible = false;
 
 
         }
@@ -827,6 +839,38 @@ namespace SUNNAH_STATION_PROJECT
                     {
 
                         MessageBox.Show("Order info Updated Successfully.");
+
+                        string st1 = statcomboxx.Text;
+                        string st2 = "Confirmed";
+                  
+                       int checkcon = 2;
+                      
+                      try
+                        {
+                            SqlConnection conn = new SqlConnection(@"Data Source=TAKIBS-WORK-STA;Initial Catalog=SSDB;Integrated Security=True");
+                            var sql = "select checkcon from Orderinfo where Oid = @Oid";
+                            using (var cmd = new SqlCommand(sql, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@Oid", int.Parse(orderidtxt.Text));
+                                conn.Open();
+                                checkcon = (int)cmd.ExecuteScalar();
+                                conn.Close();
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("error");
+                        }
+
+                        
+                        if (String.Compare(st1, st2) == 0 && checkcon ==0)
+                        {
+                            
+                            dbconn("UPDATE Product set amount = amount - '" + qtytxt.Text + "' where ID = '" + pidtxt.Text + "';");
+                            dbconn("UPDATE Orderinfo set checkcon = '1' where oid = '" + orderidtxt.Text + "';");
+
+
+                        }
 
                         clearedit();
                         row = 0;
