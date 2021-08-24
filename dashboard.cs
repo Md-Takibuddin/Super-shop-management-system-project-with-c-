@@ -84,6 +84,8 @@ namespace SUNNAH_STATION_PROJECT
             OrderSearchbox.Visible = false;
             OrderSearchcom.Visible = false;
             panel3.Visible = false;
+            ordereditsavebtn.Visible = false;
+            ordereditcancle.Visible = false;
             clearedit();
             //visible-end 
 
@@ -100,18 +102,18 @@ namespace SUNNAH_STATION_PROJECT
             label11.Visible = a;
             label12.Visible = a;
             nameboxpic.Visible = a;
-            namebox.Visible = a;
-            idboxpic.Visible = a;
+            namebox.Visible = a;          
             idbox.Visible = a;
             categoriesbox.Visible = a;
             categoriesboxpic.Visible = a;
             amountbox.Visible = a;
             amountboxpic.Visible = a;
             pricebox.Visible = a;
-            priceboxpic.Visible = a;
-            statusboxpic.Visible = a;
+            priceboxpic.Visible = a;            
             statusbox.Visible = a;
-            
+            statusboxpic.Visible = a;
+            idboxpic.Visible = a;
+
 
         }
         private void producttable_CellClick (object sender, DataGridViewCellEventArgs e)
@@ -199,9 +201,6 @@ namespace SUNNAH_STATION_PROJECT
             {
                 int am;
 
-                  
-
-
                 if (int.TryParse(amount, out am) && int.TryParse(price, out am))
                 {       
 
@@ -252,6 +251,7 @@ namespace SUNNAH_STATION_PROJECT
         {
             //visible
             updatevisible(true);
+            
             SaveandUpdate.Visible = true;
             updatecancle.Visible = true;
             deletebtn.Visible = false;
@@ -516,7 +516,6 @@ namespace SUNNAH_STATION_PROJECT
             }
             else
             {
-                
 
                 int check;
 
@@ -538,13 +537,13 @@ namespace SUNNAH_STATION_PROJECT
                         string st2 = "Confirmed";
                          
 
-
                         if (String.Compare(st1, st2) == 0)
                         {
                             
 
                            dbconn("UPDATE Product set amount = amount - '"+qtytxt.Text+"' where ID = '" + pidtxt.Text + "';");
-                           dbconn("UPDATE Product set check = '1' where ID = '" + pidtxt.Text + "';");
+                           dbconn("UPDATE Orderinfo set checkcon = '1' where oid ='" + orderidtxt.Text + "';");
+                          
 
                         }
                         
@@ -574,6 +573,10 @@ namespace SUNNAH_STATION_PROJECT
             ordertable.Visible = true;
             ordertable1();
             clearedit();
+            OrderSearchbox.Visible = true;
+            OrderSearchcom.Visible = true;
+            panel3.Visible = true;
+            Ordersearchicon.Visible = true;
         }
 
         private void clearedit()
@@ -794,7 +797,6 @@ namespace SUNNAH_STATION_PROJECT
 
                 DataTable dt = ds.Tables[0];
                 producttable.DataSource = dt;
-                //producttable.Refresh();
                 conn.Close();
             }
             catch
@@ -922,6 +924,9 @@ namespace SUNNAH_STATION_PROJECT
            
         }
 
+
+
+
         private void deleteaorder_Click(object sender, EventArgs e)
         {
             //visibale
@@ -944,7 +949,6 @@ namespace SUNNAH_STATION_PROJECT
             }
             else
             {
-
                 string dq = "delete from Orderinfo where Oid ='" + Oid_v + "'";
                 dbconn(dq);
                 ordertable1();
@@ -959,6 +963,10 @@ namespace SUNNAH_STATION_PROJECT
         {
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
+            OrderSearchbox.Visible = true;
+            OrderSearchcom.Visible = true;
+            panel3.Visible = true;
+            Ordersearchicon.Visible = true;
         }
 
         private void editaorder_Click(object sender, EventArgs e)
@@ -967,6 +975,8 @@ namespace SUNNAH_STATION_PROJECT
             ordereditcancle.Visible = true;
             deleteorder.Visible = false;
             deleteordercancle.Visible = false;
+            
+            
         }
         private void ordereditcancle_Click(object sender, EventArgs e)
         {
@@ -975,6 +985,10 @@ namespace SUNNAH_STATION_PROJECT
             ordereditcancle.Visible = false;
             ordereditsavebtn.Visible = false;
             ordertable.Visible = true;
+            OrderSearchbox.Visible = true;
+            OrderSearchcom.Visible = true;
+            panel3.Visible = true;
+            Ordersearchicon.Visible = true;
             ordertable1();
 
 
@@ -992,8 +1006,12 @@ namespace SUNNAH_STATION_PROJECT
             label14.Visible = false;
             orderedit.Visible = false;
             ordereditsavebtn.Visible = true;
-            
-          
+            OrderSearchbox.Visible = false;
+            OrderSearchcom.Visible = false;
+            panel3.Visible = false;
+            Ordersearchicon.Visible = false;
+
+
 
             orderidtxt.Text = Oid_v;
             cnametxt.Text = Cname_v;
